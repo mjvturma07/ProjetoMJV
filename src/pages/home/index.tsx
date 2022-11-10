@@ -8,5 +8,4 @@ export default function Main(){
             
         </Container>
     )
-}
-   
+} 
