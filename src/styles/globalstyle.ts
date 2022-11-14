@@ -1,6 +1,7 @@
 import {createGlobalStyle} from "styled-components"
 
 export default createGlobalStyle`
+
     :root {
     --color-text: #FFF;
     --color-text-in-primary: #000000;
@@ -12,15 +13,13 @@ export default createGlobalStyle`
     --color-warning: #FBEA85;
     --color-error: #EA524F;
 
-    font-size: 60%;   
+    //Reduce font-seize for better utilization of REM unit
+
+    font-size: 62.5%;   
   }
 
-
-
- 
-
-
   @media (min-width: 700px) {
+
     :root {
       font-size: 62.5%;
     }

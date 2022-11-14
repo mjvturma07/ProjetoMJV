@@ -1,52 +1,56 @@
-import { useEffect, useState } from "react";
-import Button from "../../components/button";
 import Input from "../../components/input";
 import { Container } from "./style";
 
 import felicitalogo from "../../assets/felicitalogo.png"
+import react ,{ useState, createContext} from "react";
+
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
 
-    useEffect(()=>{
-        async function getUsersData(){
-            await fetch('https://api.escuelajs.co/api/v1/users')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
+    const [loginFailed , setLoginFailed] = useState(false)
+    const [loginSuces , setloginSucess] = useState(false)
+
+    let Navigate = useNavigate()
+
+    async function tryLogin(event:any){
+        
+        event.preventDefault()
+        setLoginFailed(false)
+        setloginSucess(false)
+
+        var data = {
+           'email': event.target[1].value,
+           'password': event.target[2].value
         }
 
-        async function tryLogin(){
+        await fetch('https://api.escuelajs.co/api/v1/auth/login', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json, text/plain, */*',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }).then(res => res.status === 201 ? loginSucess() : setLoginFailed(true))
+    }
 
-            var data = {
-               'email': 'admin@mail.com',
-               'password': 'admin123'
-            }
-
-            await fetch('https://api.escuelajs.co/api/v1/auth/login', {
-                method: 'POST',
-                headers: {
-                  'Accept': 'application/json, text/plain, */*',
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-              }).then(res => res.json())
-                .then(res => console.log(res));
-        }
-
-    },[])
-
+    function loginSucess(){
+        setloginSucess(true)
+        setTimeout(()=>{Navigate("/home")}, 1000)
+    }
+    
     return(
         <Container>
             <img src={felicitalogo} alt="" />
-            <form>
+            <form onSubmit={(event) => tryLogin(event)}>
                 <fieldset>
                     <legend> <span className="tracoazul"></span> Login <span className="tracoazul"></span> </legend>
+                    
                                 <Input 
                                     id='email' 
                                     name='email' 
                                     label='E-mail' 
-                                    type='email'  
+                                    type='email'
                                 />
 
                                 <Input 
@@ -56,11 +60,10 @@ export default function Login(){
                                     type='password'  
                                 /> 
 
-                                <Button
-                                text="Entrar"
-                                submit= {true}
-                                id="loginbut"
-                                />
+                                { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}
+                                { loginSuces && <h2 id="loginsucess">Logado com sucesso</h2>}
+
+                                <button type="submit" id="loginbut">Entrar</button>
                 </fieldset>
             </form>
         </Container>
