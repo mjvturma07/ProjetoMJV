@@ -7,7 +7,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    background-color:  #16e6a1;
+    background-color:  var(--color-secondary);
     
     border-radius: 6px;
 
@@ -21,6 +21,8 @@ export const Container = styled.div`
         background-color: transparent;
         border: none;
         color: var(--color-text-in-primary);
+        font-weight:bold;
+        letter-spacing: .1rem;
     }
 
 `

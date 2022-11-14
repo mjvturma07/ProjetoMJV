@@ -41,23 +41,23 @@ export default function Login(){
             <img src={felicitalogo} alt="" />
             <form>
                 <fieldset>
-                    <legend>Faça seu login</legend>
+                    <legend> <span className="tracoazul"></span> Login <span className="tracoazul"></span> </legend>
                                 <Input 
                                     id='email' 
                                     name='email' 
-                                    label='E-mail:' 
+                                    label='E-mail' 
                                     type='email'  
                                 />
 
                                 <Input 
                                     id='password' 
                                     name='password' 
-                                    label='Senha:' 
+                                    label='Senha' 
                                     type='password'  
                                 /> 
 
                                 <Button
-                                text="submit"
+                                text="Entrar"
                                 submit= {true}
                                 id="loginbut"
                                 />

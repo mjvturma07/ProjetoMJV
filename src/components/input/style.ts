@@ -26,7 +26,7 @@ export const Container = styled.div`
         padding: 5px;
         border: none;
         
-        color: var(--color-primary);
+        color: var(--color-text-in-primary);
     }
 
     label {
@@ -37,6 +37,8 @@ export const Container = styled.div`
         position: absolute;
         top: 0;
         left: 12px;
+
+        font-size: 1.5rem;
 
         transition: top 0.5s, left 0.3s ease-out;
     }
@@ -53,7 +55,8 @@ export const Container = styled.div`
         border-radius: 14px;
 
         color: var(--color-text-in-primary);
-        font-size: 14px;
+        font-size: 1.4rem;
+        font-weight:bold;
     }
 
     input:focus ~ svg {
