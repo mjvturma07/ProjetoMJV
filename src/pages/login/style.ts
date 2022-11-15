@@ -10,8 +10,10 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
 
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
+
+        background: rgba(0, 0, 0, 0.2);
 
         position: absolute;
         top: 50%;
@@ -24,10 +26,9 @@ export const Container = styled.div`
         }
 
         form{
-            background: rgba(255, 255, 255, 0.30);
+            background: var(--color-text);
             border-radius: .5rem;
-            backdrop-filter: blur(10.6px);
-            -webkit-backdrop-filter: blur(10.6px);
+
             border: 1px solid rgba(255, 255, 255, 0.11);
 
             animation: 1s ${flipAnimation};
@@ -36,16 +37,19 @@ export const Container = styled.div`
             width: 40rem;
             margin-bottom: 4rem;
             margin-left: 2rem;
+
+            position: relative;
         }
 
         legend{
             display: flex;
+            flex-direction: column;
             align-items: center;
 
             color: var(--color-text-in-primary);
             font-weight: bold;
             text-align: center;
-            letter-spacing:.5rem;
+
 
             gap: 1rem;
         }
@@ -66,26 +70,10 @@ export const Container = styled.div`
         .tracovermelho{
             display: flex;
 
-            background-color: var(--color-tertiary);
-
-            width: 7rem;
-            height:.5rem;
-        }
-        .tracoazul{
-            display: flex;
-
-            background-color: var(--color-secondary);
-
-            width: 7rem;
-            height:.5rem;
-        }
-        .tracolaranja{
-            display: flex;
-
             background-color: var(--color-primary);
 
-            width: 7rem;
-            height:.5rem;
+            width: 4rem;
+            height:.3rem;
         }
 
         button{
@@ -94,15 +82,15 @@ export const Container = styled.div`
             align-items: center;
             
             border: none;
-            color: var(--color-text-in-primary);
+            color: var(--color-text);
             font-weight:bold;
             letter-spacing: .1rem;
 
-            background-color:  var(--color-secondary);
-            border-radius: 6px;
+            background: linear-gradient(89.91deg, #F21414 -33.43%, #FF4E4E 194.53%);
+            border-radius: 8px;
 
             height: 4.8rem;
-            width: 15rem;
+            width: 100%;
             margin: 0 auto;
         }
 
@@ -124,5 +112,19 @@ export const Container = styled.div`
             text-align: center;
 
             margin-top: 1rem;
+        }
+
+      
+        #closebutton{
+            position: absolute;
+            top: 5%;
+            right: 5%;
+
+            color: #5D6670;
+
+            width: 1.6rem;
+            height: 1.6rem;
+
+            cursor: pointer;
         }
 `

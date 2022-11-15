@@ -6,10 +6,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
-    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 0 15px;
+
+    background-color: rgba(155, 155, 155, 0.1);
 
     color: var(--color-text-in-primary);
     
@@ -41,6 +42,7 @@ export const Container = styled.div`
         font-size: 1.5rem;
 
         transition: top 0.5s, left 0.3s ease-out;
+        color: #8D8E90;
     }
 
     /* input:focus + label, input:not(:placeholder-shown) + label {  */
@@ -49,7 +51,6 @@ export const Container = styled.div`
         left: 10px;
 
         height: fit-content;
-        background-color: var(--color-secondary);
 
         padding: 3px 10px;
         border-radius: 14px;

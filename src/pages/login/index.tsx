@@ -1,15 +1,16 @@
 import Input from "../../components/input";
 import { Container } from "./style";
 
-import felicitalogo from "../../assets/felicitalogo.png"
-import react ,{ useState, createContext} from "react";
+import  { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
+import { FiX } from "react-icons/fi";
 
 export default function Login(){
 
     const [loginFailed , setLoginFailed] = useState(false)
     const [loginSuces , setloginSucess] = useState(false)
+    const [closed, setClosed] = useState("LoginScreenOpen")
 
     let Navigate = useNavigate()
 
@@ -38,18 +39,23 @@ export default function Login(){
         setloginSucess(true)
         setTimeout(()=>{Navigate("/home")}, 1000)
     }
+
+    function closeLoginScreen(){
+        setClosed("LoginScreenClosed")
+    }
     
     return(
-        <Container>
-            <img src={felicitalogo} alt="" />
+        <Container id= {closed}>
+           
             <form onSubmit={(event) => tryLogin(event)}>
+                <FiX id="closebutton" onClick={closeLoginScreen} />
                 <fieldset>
-                    <legend> <span className="tracoazul"></span> Login <span className="tracoazul"></span> </legend>
+                    <legend> Entrar <span className="tracovermelho"></span> </legend>
                     
                                 <Input 
                                     id='email' 
                                     name='email' 
-                                    label='E-mail' 
+                                    label='Insira seu e-mail' 
                                     type='email'
                                 />
 
@@ -63,7 +69,7 @@ export default function Login(){
                                 { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}
                                 { loginSuces && <h2 id="loginsucess">Logado com sucesso</h2>}
 
-                                <button type="submit" id="loginbut">Entrar</button>
+                                <button type="submit" id="loginbut">Iniciar sessão</button>
                 </fieldset>
             </form>
         </Container>

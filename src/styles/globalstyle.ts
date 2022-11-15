@@ -5,9 +5,9 @@ export default createGlobalStyle`
     :root {
     --color-text: #FFF;
     --color-text-in-primary: #000000;
-    --color-primary: #FBD786;
+    --color-primary: #F21416;
     --color-secondary: #D0F8CD;
-    --color-tertiary:  #F88B7F;
+    --color-tertiary:  #B3BAC5;
     --color-border: rgba(255, 255, 255, 0.2);
     --color-success: #7CC39C;
     --color-warning: #FBEA85;
@@ -80,6 +80,12 @@ export default createGlobalStyle`
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #fff;
+  }
+
+  #LoginScreenClosed{
+            display: none;
+            width: 0;
+            height: 0;
   }
 
 `;
