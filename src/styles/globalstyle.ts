@@ -1,21 +1,25 @@
 import {createGlobalStyle} from "styled-components"
 
 export default createGlobalStyle`
+
     :root {
-    --color-text: #FFFFFF;
+    --color-text: #FFF;
     --color-text-in-primary: #000000;
-    --color-primary: #3EC863;
-    --color-secondary: #310A27;
-    --color-tertiary: #102542;
+    --color-primary: #F21416;
+    --color-secondary: #D0F8CD;
+    --color-tertiary:  #B3BAC5;
     --color-border: rgba(255, 255, 255, 0.2);
     --color-success: #7CC39C;
     --color-warning: #FBEA85;
     --color-error: #EA524F;
 
-    font-size: 60%;   
+    //Reduce font-seize for better utilization of REM unit
+
+    font-size: 62.5%;   
   }
 
   @media (min-width: 700px) {
+
     :root {
       font-size: 62.5%;
     }
@@ -34,7 +38,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(250deg, var(--color-secondary) -12%, var(--color-tertiary) 114%);
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
     color: var(--color-text);
     -webkit-font-smoothing: antialiased;
 
@@ -43,7 +47,7 @@ export default createGlobalStyle`
   }
 
   body, input, button, textarea {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
   }
 
@@ -77,4 +81,11 @@ export default createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background: #fff;
   }
+
+  #LoginScreenClosed{
+            display: none;
+            width: 0;
+            height: 0;
+  }
+
 `;
