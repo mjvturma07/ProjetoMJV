@@ -11,8 +11,8 @@ interface inputProps{
 
 export default function Input({id, label, type, name, children}:inputProps){
     return(
-        <Container>
-            <input type={type} name={name} id={id} placeholder=' ' />
+        <Container id={id} >
+            <input type={type} name={name} placeholder=' ' />
             <label htmlFor={id}>{label}</label>
             {children}
         </Container>
