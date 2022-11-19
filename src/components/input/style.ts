@@ -27,7 +27,7 @@ export const Container = styled.div`
         padding: 5px;
         border: none;
         
-        color: var(--color-text-in-primary);
+        color: var(--color-text);
     }
 
     label {
@@ -55,7 +55,7 @@ export const Container = styled.div`
         padding: 3px 10px;
         border-radius: 14px;
 
-        color: var(--color-text-in-primary);
+        color: var(--color-text);
         font-size: 1.4rem;
         font-weight:bold;
     }

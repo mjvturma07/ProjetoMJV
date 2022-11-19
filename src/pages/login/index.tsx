@@ -10,7 +10,7 @@ export default function Login(){
 
     const [loginFailed , setLoginFailed] = useState(false)
     const [loginSuces , setloginSucess] = useState(false)
-    const [closed, setClosed] = useState("LoginScreenOpen")
+    const [closed, setClosed] = useState("LoginScreenClosed")
 
     let Navigate = useNavigate()
 
@@ -37,41 +37,47 @@ export default function Login(){
 
     function loginSucess(){
         setloginSucess(true)
-        setTimeout(()=>{Navigate("/home")}, 1000)
+        // setTimeout(()=>{Navigate("/home")}, 1000)
+        setTimeout(()=>{closeLoginScreen()}, 1000)
     }
 
     function closeLoginScreen(){
         setClosed("LoginScreenClosed")
     }
+
+    function openLoginScreen(){
+        setClosed("LoginScreenOpen")
+    }
     
     return(
-        <Container id= {closed}>
-           
-            <form onSubmit={(event) => tryLogin(event)}>
-                <FiX id="closebutton" onClick={closeLoginScreen} />
-                <fieldset>
-                    <legend> Entrar <span className="tracovermelho"></span> </legend>
-                    
-                                <Input 
-                                    id='email' 
-                                    name='email' 
-                                    label='Insira seu e-mail' 
-                                    type='email'
-                                />
+        <Container>
 
-                                <Input 
-                                    id='password' 
-                                    name='password' 
-                                    label='Senha' 
-                                    type='password'  
-                                /> 
+            <button onClick={openLoginScreen} id="login">Entrar</button>
 
-                                { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}
-                                { loginSuces && <h2 id="loginsucess">Logado com sucesso</h2>}
-
-                                <button type="submit" id="loginbut">Iniciar sessão</button>
-                </fieldset>
-            </form>
+            <section id="formdiv">
+                <form id= {closed} onSubmit={(event) => tryLogin(event)}>
+                    <FiX id="closebutton" onClick={closeLoginScreen} />
+                    <fieldset>
+                        <legend> Entrar <span className="tracovermelho"></span> </legend>
+                
+                                    <Input
+                                        id='email'
+                                        name='email'
+                                        label='Insira seu e-mail'
+                                        type='email'
+                                    />
+                                    <Input
+                                        id='password'
+                                        name='password'
+                                        label='Senha'
+                                        type='password'
+                                    />
+                                    { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}
+                                    { loginSuces && <h2 id="loginsucess">Logado com sucesso</h2>}
+                                    <button type="submit" id="loginbut">Iniciar sessão</button>
+                    </fieldset>
+                </form>
+            </section>
         </Container>
     )
 }

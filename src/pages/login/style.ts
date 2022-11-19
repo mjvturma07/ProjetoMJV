@@ -10,15 +10,7 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
 
-        width: 100vw;
-        height: 100vh;
-
-        background: rgba(0, 0, 0, 0.2);
-
-        position: absolute;
-        top: 50%;
-        transform: translate(0,-50%);
-        
+        background: var(--color-text-in-primary);
 
         fieldset{
             padding: 2rem;
@@ -26,19 +18,28 @@ export const Container = styled.div`
         }
 
         form{
-            background: var(--color-text);
+            background: white;
             border-radius: .5rem;
 
             border: 1px solid rgba(255, 255, 255, 0.11);
 
-            animation: 1s ${flipAnimation};
+            
 
             padding: 2rem;
-            width: 40rem;
+            width: 49rem;
+            height: 34rem;
             margin-bottom: 4rem;
-            margin-left: 2rem;
 
-            position: relative;
+            animation: 1s ${flipAnimation};
+        }
+// This #formdiv is created because the animation is overriding the 
+//transform props, so i am making the tranlations props on a parent div and the animation on the child
+
+        #formdiv{
+            position: absolute;
+            transform: translate(50%,-50%);
+            top: 60%;
+            right: 50%;
         }
 
         legend{
@@ -46,7 +47,7 @@ export const Container = styled.div`
             flex-direction: column;
             align-items: center;
 
-            color: var(--color-text-in-primary);
+            color: var(--color-text);
             font-weight: bold;
             text-align: center;
 
@@ -82,16 +83,28 @@ export const Container = styled.div`
             align-items: center;
             
             border: none;
-            color: var(--color-text);
+            color: var(--color-text-in-primary);
             font-weight:bold;
             letter-spacing: .1rem;
 
-            background: linear-gradient(89.91deg, #F21414 -33.43%, #FF4E4E 194.53%);
+            background: var(--color-primary);
             border-radius: 8px;
 
-            height: 4.8rem;
-            width: 100%;
+            height: 4.7rem;
+            width:100%;
             margin: 0 auto;
+
+            box-shadow: 1px 1px 1px var(--color-primary);
+            padding: 1rem 2rem;
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0px;
+        }
+
+        button:active{
+            box-shadow: inset 1px 1px 1px var(--color-primary);
         }
 
         // Error and Success style
@@ -126,5 +139,14 @@ export const Container = styled.div`
             height: 1.6rem;
 
             cursor: pointer;
+        }
+
+        #login{
+            display: flex;
+            border-radius: 6px;
+            height: 3.5rem;
+            width: 9rem;
+            font-size: 12px;
+
         }
 `

@@ -3,8 +3,8 @@ import {createGlobalStyle} from "styled-components"
 export default createGlobalStyle`
 
     :root {
-    --color-text: #FFF;
-    --color-text-in-primary: #000000;
+    --color-text: #1B1D21;
+    --color-text-in-primary: #FFFF;
     --color-primary: #F21416;
     --color-secondary: #D0F8CD;
     --color-tertiary:  #B3BAC5;
@@ -34,11 +34,11 @@ export default createGlobalStyle`
 
   body,html{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
   }
 
   body {
-    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    background-image: white;
     color: var(--color-text);
     -webkit-font-smoothing: antialiased;
 
@@ -47,7 +47,7 @@ export default createGlobalStyle`
   }
 
   body, input, button, textarea {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
   }
 
@@ -59,6 +59,10 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
+  li{
+    list-style: none;
+  }
+
   /* width */
   ::-webkit-scrollbar {
     width: 6px;
@@ -66,14 +70,14 @@ export default createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--color-tertiary);
     margin: 1rem;
     border-radius: 1.6rem;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #fff;
+    background: var(--color-primary);
     border-radius: 1.6rem;
   }
 
