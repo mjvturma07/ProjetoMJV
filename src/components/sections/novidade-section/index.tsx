@@ -13,39 +13,53 @@ export default function Novidade_section(){
     }
 
     useEffect(()=>{
+
         async function getnovidadesData(){
+
             let products = pageNovidades * 8
+
             if (products === 1) {
                 products = 0
             }
-            await fetch(`https://api.escuelajs.co/api/v1/products?offset=${products}&limit=8`, {
-                method: 'GET',
-               }).then((res )=> res.json()).then((data) => setnovidadeProductsData(data))
-            }
-            getnovidadesData()
 
+            await fetch(`https://api.escuelajs.co/api/v1/products?offset=${products}&limit=8`, 
+            {method: 'GET',})
+            .then((res )=> res.json())
+            .then((data) => setnovidadeProductsData(data))
+
+        }
+
+            getnovidadesData()
+  
     },[pageNovidades])
 
 
     return(
         <NovidadeContainer>
-                    <div className="productheader">
+                    <section className="productheader">
+
                         <div className="flexrow">
                             <h2>Novidades</h2>
                             <button>Ver todas as novidades ➩</button>
                         </div>
 
                         <div className="flexrow">
+
                             <h3>Pagina: {pageNovidades}</h3>
+
                             <button onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
                                 {"<"}
                             </button>
+
                             <button onClick={ ()=> setPageNovidades(pageNovidades + 1)}>
                                 {">"}
                             </button>
+                            
                         </div>
-                    </div>
-                    <div className="products">
+
+                    </section>
+                    
+                    <section className="products">
                         {
                             novidadeProductsData?.slice(0,4).map((product) => {
                                 return(
@@ -59,8 +73,9 @@ export default function Novidade_section(){
                                 )
                             })
                         }
-                    </div>
-                    <div className="products">
+                    </section>
+
+                    <section className="products">
                         {
                             novidadeProductsData?.slice(4,8).map((product) => {
                                 return(
@@ -74,7 +89,7 @@ export default function Novidade_section(){
                                 )
                             })
                         }
-                    </div>
+                    </section>
         </NovidadeContainer>
     )
 }

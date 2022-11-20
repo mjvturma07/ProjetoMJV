@@ -15,12 +15,12 @@ export const Header = styled.header`
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
+        
         img{
             margin-bottom: 1rem;
         }
 
-        li{
+        ul{
             display: flex;
             justify-content: center;
             align-items: center;

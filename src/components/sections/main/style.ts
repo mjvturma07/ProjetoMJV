@@ -8,6 +8,7 @@ export const Main = styled.main`
 
     width: 100vw;
     height: 52rem;
+    
     padding-inline: 8rem;
 
     background: radial-gradient(118.65% 107.05% at 75.38% 59.24%, #F54646 0%, #980C0C 62.86%);
@@ -16,7 +17,7 @@ export const Main = styled.main`
 
     #mockup{
         height: 53rem;
-        width: 53rem;
+        width: 54.9rem;
     }
 
     #maintext{

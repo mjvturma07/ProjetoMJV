@@ -2,8 +2,6 @@ import Input from "../input";
 import { Container } from "./style";
 
 import  { useState } from "react";
-
-import { useNavigate } from "react-router-dom";
 import { FiX } from "react-icons/fi";
 
 export default function Login(){
@@ -12,9 +10,6 @@ export default function Login(){
     const [loginSuces , setloginSucess] = useState(false)
     const [closed, setClosed] = useState("LoginScreenClosed")
 
-    let Navigate = useNavigate()
-
-   
     async function tryLogin(event:any){
         
         event.preventDefault()
@@ -55,9 +50,13 @@ export default function Login(){
             <button onClick={openLoginScreen} id="login">Entrar</button>
 
             <section id="formdiv">
+
                 <form id= {closed} onSubmit={(event) => tryLogin(event)}>
+
                     <FiX id="closebutton" onClick={closeLoginScreen} />
+
                     <fieldset>
+
                         <legend> Entrar <span className="tracovermelho"></span> </legend>
                 
                                     <Input
@@ -72,11 +71,16 @@ export default function Login(){
                                         label='Senha'
                                         type='password'
                                     />
+                                    
                                     { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}
                                     { loginSuces && <h2 id="loginsucess">Logado com sucesso</h2>}
+
                                     <button type="submit" id="loginbut">Iniciar sessão</button>
+
                     </fieldset>
+
                 </form>
+
             </section>
         </Container>
     )
