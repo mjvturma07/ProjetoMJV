@@ -31,7 +31,8 @@ export default function Destaque_section(){
 
     return(
         <DestaqueContainer>
-                    <div className="productheader">
+
+                    <section className="productheader">
                         <div className="flexrow">
                             <h2>Destaques da semana</h2>
                             <button>Ver todas as ofertas ➩</button>
@@ -46,8 +47,9 @@ export default function Destaque_section(){
                                 {">"}
                             </button>
                         </div>
-                    </div>
-                    <div className="products">
+                    </section>
+
+                    <section className="products">
                         {
                             destaqueProductsData?.map((product) => {
                                 return(
@@ -61,7 +63,7 @@ export default function Destaque_section(){
                                 )
                             })
                         }
-                    </div>
+                    </section>
         </DestaqueContainer>
     )
 }

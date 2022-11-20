@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const NovidadeContainer = styled.section`
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
 
-        h2{
+    width: 100%;
+
+    margin-top: 4rem;
+
+    h2{
         font-weight: 600;
         font-size: 25px;
         line-height: 38px;
@@ -14,11 +16,12 @@ export const NovidadeContainer = styled.section`
     }
     
     .products{
-            display: flex;
-            flex-direction: row;
-            gap: 3rem;
+        display: flex;
+        flex-direction: row;
 
-            margin-top: 2rem;
+        gap: 3rem;
+
+        margin-top: 2rem;
     }
 
     .productheader{

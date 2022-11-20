@@ -22,16 +22,18 @@ export const Container = styled.div`
       img{
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
+
         height: 19.1rem;
         width: 100%;
+
         cursor: pointer;
       }
 
       h2{
         font-size: 1.2rem;
-        margin-top: .7rem;
-
         color: #959EAD;
+
+        margin-top: .7rem;
         margin-bottom: 1.5rem;
       }
 
@@ -39,6 +41,7 @@ export const Container = styled.div`
         font-size: 1.6rem;
         color: #1B1D21;
         line-height: 1.4rem;
+
         margin-bottom: 1.5rem;
       }
       
@@ -51,6 +54,7 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+
         text-align: left;
 
         padding: 1rem;
@@ -58,8 +62,10 @@ export const Container = styled.div`
 
       .comprar{
         margin: 0 auto;
+
         width: 20rem;
         height: 4rem;
+        
         color: var(--color-text-in-primary);
         background-color: var(--color-primary);
 
