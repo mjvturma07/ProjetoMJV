@@ -1,5 +1,5 @@
 import Home from "./pages/home";
-import Login from "./pages/login";
+import Login from "./components/login";
 import  GlobalStyle  from "./styles/globalstyle";
 import ReactDOM from "react-dom/client";
 

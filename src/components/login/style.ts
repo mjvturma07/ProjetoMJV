@@ -38,7 +38,7 @@ export const Container = styled.div`
         #formdiv{
             position: absolute;
             transform: translate(50%,-50%);
-            top: 60%;
+            top: 50%;
             right: 50%;
         }
 
@@ -82,7 +82,6 @@ export const Container = styled.div`
             justify-content: center;
             align-items: center;
             
-            border: none;
             color: var(--color-text-in-primary);
             font-weight:bold;
             letter-spacing: .1rem;
@@ -144,9 +143,8 @@ export const Container = styled.div`
         #login{
             display: flex;
             border-radius: 6px;
-            height: 3.5rem;
-            width: 9rem;
+            height: 4.5rem;
+            width: 12rem;
             font-size: 12px;
-
         }
 `

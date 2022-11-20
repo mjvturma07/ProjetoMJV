@@ -16,6 +16,7 @@ export default createGlobalStyle`
     //Reduce font-seize for better utilization of REM unit
 
     font-size: 62.5%;   
+    scroll-behavior: smooth;
   }
 
   @media (min-width: 700px) {
@@ -57,10 +58,18 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+    border: none;
+    background: none;
   }
 
   li{
     list-style: none;
+  }
+
+  .flexrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   /* width */
