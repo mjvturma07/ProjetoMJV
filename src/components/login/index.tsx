@@ -1,4 +1,4 @@
-import Input from "../../components/input";
+import Input from "../input";
 import { Container } from "./style";
 
 import  { useState } from "react";
@@ -14,6 +14,7 @@ export default function Login(){
 
     let Navigate = useNavigate()
 
+   
     async function tryLogin(event:any){
         
         event.preventDefault()
@@ -37,7 +38,6 @@ export default function Login(){
 
     function loginSucess(){
         setloginSucess(true)
-        // setTimeout(()=>{Navigate("/home")}, 1000)
         setTimeout(()=>{closeLoginScreen()}, 1000)
     }
 
