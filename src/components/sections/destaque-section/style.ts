@@ -16,6 +16,7 @@ export const DestaqueContainer = styled.section`
     .products{
             display: flex;
             flex-direction: row;
+            justify-content: space-around;
             gap: 3rem;
 
             margin-top: 2rem;
