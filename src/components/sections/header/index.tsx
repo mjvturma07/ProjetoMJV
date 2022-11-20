@@ -5,7 +5,7 @@ export default function Header_section(){
     return(
         <Header>
                 <nav>
-                    <img src="/logo.svg" alt="logo shop" />
+                    <img width={"200px"} height={"60px"} src="/logo.svg" alt="logo shop" />
                     <li>
                         <button>Categorias</button>
                         <button>Shop</button>

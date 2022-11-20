@@ -12,7 +12,7 @@ interface inputProps{
 export default function Input({id, label, type, name, children}:inputProps){
     return(
         <Container id={id} >
-            <input type={type} name={name} placeholder=' ' />
+            <input type={type} name={name} placeholder=' ' aria-label={name}/>
             <label htmlFor={id}>{label}</label>
             {children}
         </Container>
