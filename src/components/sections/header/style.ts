@@ -20,7 +20,7 @@ export const Header = styled.header`
             margin-bottom: 1rem;
         }
 
-        li{
+        ul{
             display: flex;
             justify-content: center;
             align-items: center;

@@ -8,3 +8,5 @@ após a inicialização escreva "yarn dev" e enter para visualizar o site no mod
 ou "yarn build" para buildar a aplicação.
 
 O projeto foi criado com Vite + React com Typescript.
+
+Link do deploy https://aquiexpress.vercel.app/ usando Vercel ( Deploy do main )

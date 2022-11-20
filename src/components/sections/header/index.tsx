@@ -6,11 +6,11 @@ export default function Header_section(){
         <Header>
                 <nav>
                     <img width={"200px"} height={"60px"} src="/logo.svg" alt="logo shop" />
-                    <li>
-                        <button>Categorias</button>
-                        <button>Shop</button>
-                        <button>Contato</button>
-                    </li>
+                    <ul>
+                        <li><button>Categorias</button></li>
+                        <li><button>Shop</button></li>
+                        <li><button>Contato</button></li>
+                    </ul>
                 </nav>
                 <Login/>
         </Header>

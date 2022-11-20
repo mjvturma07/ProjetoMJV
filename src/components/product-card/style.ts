@@ -22,7 +22,7 @@ export const Container = styled.div`
       img{
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-        height: 23rem;
+        height: 19.1rem;
         width: 100%;
         cursor: pointer;
       }

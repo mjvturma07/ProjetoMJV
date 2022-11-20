@@ -16,7 +16,7 @@ export const Main = styled.main`
 
     #mockup{
         height: 53rem;
-        width: 53rem;
+        width: 54.9rem;
     }
 
     #maintext{
