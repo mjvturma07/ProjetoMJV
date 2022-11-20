@@ -27,7 +27,7 @@ export const Container = styled.div`
         cursor: pointer;
       }
 
-      h3{
+      h2{
         font-size: 1.2rem;
         margin-top: .7rem;
 
@@ -35,7 +35,7 @@ export const Container = styled.div`
         margin-bottom: 1.5rem;
       }
 
-      #title{
+      .title{
         font-size: 1.6rem;
         color: #1B1D21;
         line-height: 1.4rem;
@@ -46,7 +46,7 @@ export const Container = styled.div`
         font-weight: 600;
       }
 
-      #text{
+      .text{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -56,7 +56,7 @@ export const Container = styled.div`
         padding: 1rem;
       }
 
-      #comprar{
+      .comprar{
         margin: 0 auto;
         width: 20rem;
         height: 4rem;
