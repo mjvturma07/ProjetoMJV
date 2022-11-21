@@ -61,9 +61,18 @@ export default createGlobalStyle`
     border: none;
     background: none;
   }
+  
+  button:hover{
+    transform: scale(1.05);
+  }
 
   li{
     list-style: none;
+  }
+
+  .bold{
+    font-weight: bold;
+    color: var(--color-primary);
   }
 
   .flexrow{

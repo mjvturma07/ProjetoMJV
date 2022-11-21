@@ -30,7 +30,7 @@ export const Container = styled.div`
             height: 34rem;
             margin-bottom: 4rem;
 
-            animation: 1s ${flipAnimation};
+            animation: .7s ${flipAnimation};
         }
 // This #formdiv is created because the animation is overriding the 
 //transform props, so i am making the tranlations props on a parent div and the animation on the child

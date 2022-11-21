@@ -10,6 +10,7 @@ export const Header = styled.header`
     height: 9rem;
 
     color: var(--color-text);
+    
     nav{
         display: flex;
         flex-direction: row;

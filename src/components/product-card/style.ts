@@ -1,32 +1,30 @@
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
+import { fadeInRight,fadeInLeft } from 'react-animations';
+
+const toRight = keyframes`${fadeInRight}`;
 
 interface ContainerProps{
   open: boolean
+  motion?: string,
 }
 
 export const Container = styled.div<ContainerProps>`
       display: flex;
- 
       flex-direction: column;
 
       height: ${(props) => props.open ? 40 : 35 }rem;
       width: 30rem;
 
       border-radius: 8px;
+      border: 1px solid var(--color-warning);
 
       background-color: #2E2E2E06;
-      padding: .5rem;
-
+      padding: 1rem;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
       transition: .4s ease-out;
-      animation: fadeIn .5s;
+      animation: .5s  ${toRight};
       cursor: pointer;
-
-      @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      } 
 
       :active{
         box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -88,9 +86,6 @@ export const Container = styled.div<ContainerProps>`
         z-index: 100;
 
         animation: fadeIn 1s;
-      }
-
-      .comprar:hover{
-        transform: scale(1.05);
+        border-radius: 4px;
       }
 `

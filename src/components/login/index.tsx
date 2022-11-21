@@ -83,7 +83,10 @@ export default function Login(){
     }
 
     function openLoginScreen(){
-        setClosed("LoginScreenOpen")
+        if (loginSuces){
+            setloginSucess(false)
+            setUserData(undefined)
+        } else { setClosed("LoginScreenOpen")}
     }
     
     return(
@@ -91,7 +94,7 @@ export default function Login(){
 
             {userData?.name != undefined ? <p>Bem-vindo {userData.name}</p>: ''}
             
-            <button onClick={openLoginScreen} id="login">Entrar</button>
+            <button onClick={openLoginScreen} id="login">{loginSuces ? 'Sair' : 'Entrar'}</button>
 
             <section id="formdiv">
                 <form id= {closed} onSubmit={(event) => tryLogin(event)}>

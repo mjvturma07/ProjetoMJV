@@ -5,7 +5,7 @@ export default function Benefits_section(){
     return(
         <BenefitsContainer id="benefit">
 
-                    <h2>Conheça as vantagens de comprar no AquiExpress</h2>
+                    <h2>Conheça as vantagens de comprar no <strong className="bold">AquiExpress</strong></h2>
 
                     <ul>
                         <li>
