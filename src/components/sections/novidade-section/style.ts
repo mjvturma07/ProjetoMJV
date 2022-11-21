@@ -18,6 +18,7 @@ export const NovidadeContainer = styled.section`
     .products{
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
 
         gap: 3rem;
 

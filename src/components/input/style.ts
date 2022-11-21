@@ -28,6 +28,8 @@ export const Container = styled.div`
         border: none;
         
         color: var(--color-text);
+        position: relative;
+        z-index: 10;
     }
 
     label {
@@ -36,6 +38,7 @@ export const Container = styled.div`
         height: 100%;
 
         position: absolute;
+        z-index: 0;
         top: 0;
         left: 12px;
 

@@ -147,4 +147,9 @@ export const Container = styled.div`
             width: 12rem;
             font-size: 12px;
         }
+
+        p{
+            margin-right: 7rem;
+            font-weight:bold;
+        }
 `

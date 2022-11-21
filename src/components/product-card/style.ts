@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps{
+  open: boolean
+}
+
+export const Container = styled.div<ContainerProps>`
       display: flex;
  
       flex-direction: column;
 
-      height: 100%;
+      height: ${(props) => props.open ? 40 : 35 }rem;
       width: 30rem;
 
       border-radius: 8px;
@@ -14,6 +18,15 @@ export const Container = styled.div`
       padding: .5rem;
 
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      transition: .4s ease-out;
+      animation: fadeIn .5s;
+      cursor: pointer;
+
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      } 
 
       :active{
         box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -25,11 +38,9 @@ export const Container = styled.div`
 
         height: 19.1rem;
         width: 100%;
-
-        cursor: pointer;
       }
 
-      h2{
+      .category{
         font-size: 1.2rem;
         color: #959EAD;
 
@@ -60,6 +71,8 @@ export const Container = styled.div`
         padding: 1rem;
       }
 
+      
+
       .comprar{
         margin: 0 auto;
 
@@ -70,5 +83,14 @@ export const Container = styled.div`
         background-color: var(--color-primary);
 
         margin-top: 2rem;
+
+        position: relative;
+        z-index: 100;
+
+        animation: fadeIn 1s;
+      }
+
+      .comprar:hover{
+        transform: scale(1.05);
       }
 `
