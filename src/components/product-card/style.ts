@@ -83,9 +83,14 @@ export const Container = styled.div<ContainerProps>`
         background-color: var(--color-primary);
 
         margin-top: 2rem;
+
         position: relative;
-        z-index: 10;
+        z-index: 100;
 
         animation: fadeIn 1s;
+      }
+
+      .comprar:hover{
+        transform: scale(1.05);
       }
 `

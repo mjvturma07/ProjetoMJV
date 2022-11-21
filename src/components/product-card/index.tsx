@@ -9,7 +9,7 @@ interface inputProps{
     key: number,
 }
 
-export default function ProductCard({image, title, category, price,key}:inputProps){
+export default function ProductCard({image, title, category, price}:inputProps){
     const [cardOpen, setCardOpen] = useState(false)
 
     function openCard(){
@@ -19,7 +19,7 @@ export default function ProductCard({image, title, category, price,key}:inputPro
     }
 
     return(
-        <Container key={key} onClick={openCard} open={cardOpen}>
+        <Container onClick={openCard} open={cardOpen}>
             
             <img loading="lazy" src={image} alt={title} />
 
@@ -29,7 +29,7 @@ export default function ProductCard({image, title, category, price,key}:inputPro
                 <h3 className="title">{title}</h3>
                 <h4>R$ {price},00</h4>
 
-                { cardOpen && <button className="comprar">Comprar agora</button> }
+                { cardOpen && <button onClick={()=>{}} className="comprar">Comprar agora</button> }
 
             </section>
 

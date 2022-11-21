@@ -1,14 +1,23 @@
 import Input from "../input";
 import { Container } from "./style";
 
-import  { useState } from "react";
+import  { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
+
+interface userData{
+    id:number,
+    email: string,
+    name:string,
+}
 
 export default function Login(){
 
     const [loginFailed , setLoginFailed] = useState(false)
     const [loginSuces , setloginSucess] = useState(false)
     const [closed, setClosed] = useState("LoginScreenClosed")
+    const [authToken, setAuthToken] = useState('')
+
+    const [userData, setUserData] = useState<userData>()
 
     async function tryLogin(event:any){
         
@@ -27,9 +36,42 @@ export default function Login(){
               'Accept': 'application/json, text/plain, */*',
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
-          }).then(res => res.status === 201 ? loginSucess() : setLoginFailed(true))
-    }
+            body: JSON.stringify(data)})
+            .then(res => { return (
+
+                res.status === 201 ? loginSucess() : setLoginFailed(true),
+                res.json()
+
+            )
+            }).then(res => setAuthToken(res.access_token))
+        }
+
+
+    useEffect(()=>{
+
+        async function getUserData(){
+
+            await fetch('https://api.escuelajs.co/api/v1/auth/profile', {
+
+                method: 'GET',
+                headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`},
+                })
+                .then(res => res.json())
+                .then(res => setUserData(res))
+                }
+
+                //Verification to not getdata withoud token aplication build
+
+                if (authToken != ''){
+                    getUserData()
+                }
+                
+        },[authToken])
+            
+
 
     function loginSucess(){
         setloginSucess(true)
@@ -47,40 +89,36 @@ export default function Login(){
     return(
         <Container>
 
+            {userData?.name != undefined ? <p>Bem-vindo {userData.name}</p>: ''}
+            
             <button onClick={openLoginScreen} id="login">Entrar</button>
 
             <section id="formdiv">
-
                 <form id= {closed} onSubmit={(event) => tryLogin(event)}>
 
                     <FiX id="closebutton" onClick={closeLoginScreen} />
-
+                    
                     <fieldset>
-
                         <legend> Entrar <span className="tracovermelho"></span> </legend>
-                
-                                    <Input
-                                        id='email'
-                                        name='email'
-                                        label='Insira seu e-mail'
-                                        type='email'
-                                    />
-                                    <Input
-                                        id='password'
-                                        name='password'
-                                        label='Senha'
-                                        type='password'
-                                    />
+                            <Input
+                                id='email'
+                                name='email'
+                                label='Insira seu e-mail'
+                                type='email'
+                            />
+                            <Input
+                                id='password'
+                                name='password'
+                                label='Senha'
+                                type='password'
+                            />
                                     
-                                    { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}
-                                    { loginSuces && <h2 id="loginsucess">Logado com sucesso</h2>}
+                            { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}
+                            { loginSuces && <h2 id="loginsucess">Logado com sucesso</h2>}
 
-                                    <button type="submit" id="loginbut">Iniciar sessão</button>
-
+                            <button type="submit" id="loginbut">Iniciar sessão</button>
                     </fieldset>
-
                 </form>
-
             </section>
         </Container>
     )

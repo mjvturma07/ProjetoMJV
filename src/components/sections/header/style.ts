@@ -35,6 +35,15 @@ export const Header = styled.header`
             gap: 2rem;
 
             margin-left: 2rem;
+            li{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        #downarrow{
+            cursor: pointer;
         }
     }
 `

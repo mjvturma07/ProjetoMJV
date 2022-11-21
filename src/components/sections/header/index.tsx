@@ -1,5 +1,6 @@
 import Login from "../../login";
 import { Header } from "./style";
+import { FiChevronDown } from "react-icons/fi";
 
 export default function Header_section(){
     return(
@@ -10,6 +11,7 @@ export default function Header_section(){
                     <ul>
                         <li>
                             <button>Categorias</button>
+                            <FiChevronDown id="downarrow"/>
                         </li>
 
                         <li>
