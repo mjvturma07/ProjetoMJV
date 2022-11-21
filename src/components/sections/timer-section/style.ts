@@ -23,6 +23,21 @@ export const SearchContainer = styled.section`
                         font-size: 3rem;
                 }
 
+                h3{
+                        font-weight: bold;    
+                }
+
+                p{
+                        margin-inline: 1rem;
+                        color: #64AD5E;
+                        font-weight: 800;
+                }
+
+                .number{
+                        font-size: 3rem;
+                        font-weight: bold;
+                        color: var(--color-primary);
+                }
         }
 
         #papai{

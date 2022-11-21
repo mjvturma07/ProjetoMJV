@@ -50,7 +50,7 @@ export default function Timer_section(){
                     <main>
 
                         <h2>Natal está chegando!</h2>
-                        <h3>Compre para quem</h3>
+                        <h3>Ofertas especiais em:</h3>
 
                         <section>
                             <p><span className='number'>{days}</span> <br/> Dias</p>
