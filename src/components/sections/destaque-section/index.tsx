@@ -1,7 +1,7 @@
 import Input from "../../input";
 import { DestaqueContainer } from "./style";
 import productProps from "../../../utility/productDTO";
-import {useState, useEffect} from "react"
+import {useState, useEffect,useRef} from "react"
 import ProductCard from "../../product-card";
 
 export default function Destaque_section(){
@@ -15,7 +15,9 @@ export default function Destaque_section(){
 
     useEffect(()=>{
         async function getDestaqueData(){
+ 
             let products = pageDestaques * 4
+
             if (products === 1) {
                 products = 0
             }
@@ -28,7 +30,7 @@ export default function Destaque_section(){
 
     },[pageDestaques])
 
-
+    
     return(
         <DestaqueContainer>
 
@@ -40,10 +42,16 @@ export default function Destaque_section(){
 
                         <div className="flexrow">
                             <h3>Pagina: {pageDestaques}</h3>
-                            <button onClick={ ()=> pageDestaques != 0 ? setPageDestaques(pageDestaques -1) : ''}>
+                                <button className="pageArrow" onClick={ ()=> {
+                                    pageDestaques != 0 ? setPageDestaques(pageDestaques -1) : ''}
+                                }
+                                    >
                                 {"<"}
                             </button>
-                            <button onClick={ ()=> setPageDestaques(pageDestaques + 1)}>
+                            <button className="pageArrow" onClick={ ()=>{
+                                 setPageDestaques(pageDestaques + 1)}
+                                }
+                                 >
                                 {">"}
                             </button>
                         </div>

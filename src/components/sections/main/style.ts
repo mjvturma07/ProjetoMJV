@@ -31,7 +31,6 @@ export const Main = styled.main`
             font-style: normal;
             font-weight: 200;
             font-size: 1.6rem;
-            line-height: 36px;
         }
 
         button{

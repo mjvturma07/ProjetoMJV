@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+
+
+
 export const DestaqueContainer = styled.section`
         display: flex;
         flex-direction: column;
@@ -31,6 +34,12 @@ export const DestaqueContainer = styled.section`
         button{
             color: var(--color-primary);
             margin-left: 1.5rem;
+        }
+
+        .pageArrow{
+            background-color: #B3BAC552;
+            padding: 1rem 1.5rem;
+            border-radius: 50%;
         }
     }
 `

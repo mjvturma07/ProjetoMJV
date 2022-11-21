@@ -7,7 +7,7 @@ export default function Header_section(){
         <Header>
 
                 <nav>
-                    <img loading="lazy" width={"200px"} height={"60px"} src="/logo.svg" alt="logo shop" />
+                    <img loading="lazy" width={"200px"} height={"60px"} src="/logo-with-text.svg" alt="logo shop" />
                     <ul>
                         <li>
                             <button>Categorias</button>

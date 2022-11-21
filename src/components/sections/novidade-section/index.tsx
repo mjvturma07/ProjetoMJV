@@ -47,11 +47,11 @@ export default function Novidade_section(){
 
                             <h3>Pagina: {pageNovidades}</h3>
 
-                            <button onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
+                            <button className="pageArrow" onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
                                 {"<"}
                             </button>
 
-                            <button onClick={ ()=> setPageNovidades(pageNovidades + 1)}>
+                            <button className="pageArrow" onClick={ ()=> setPageNovidades(pageNovidades + 1)}>
                                 {">"}
                             </button>
                             
