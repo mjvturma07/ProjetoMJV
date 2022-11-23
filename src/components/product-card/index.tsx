@@ -10,18 +10,28 @@ interface inputProps{
 }
 
 export default function ProductCard({image, title, category, price}:inputProps){
+
     const [cardOpen, setCardOpen] = useState(false)
 
     function openCard(){
         if (!cardOpen){
             setCardOpen(true)
-        } else {setCardOpen(false)}
+        } else {
+            setCardOpen(false)
+        }
     }
 
     return(
-        <Container onClick={openCard} open={cardOpen}>
+        <Container 
+        onClick={openCard} 
+        open={cardOpen}
+        >
             
-            <img loading="lazy" src={image} alt={title} />
+            <img 
+            loading="lazy" 
+            src={image}
+            alt={title} 
+            />
 
             <section className="text">
 
@@ -32,7 +42,7 @@ export default function ProductCard({image, title, category, price}:inputProps){
                 { cardOpen && <button onClick={()=>{}} className="comprar">Comprar agora</button> }
 
             </section>
-
+            
         </Container>
     )
 }

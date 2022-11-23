@@ -14,7 +14,7 @@ export default function Novidade_section(){
 
     useEffect(()=>{
 
-        async function getnovidadesData(){
+        async function getNovidadesData(){
 
             let products = pageNovidades * 8
 
@@ -29,7 +29,7 @@ export default function Novidade_section(){
 
         }
 
-            getnovidadesData()
+            getNovidadesData()
   
     },[pageNovidades])
 

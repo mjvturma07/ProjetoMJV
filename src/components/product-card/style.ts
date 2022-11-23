@@ -26,6 +26,15 @@ export const Container = styled.div<ContainerProps>`
       animation: .5s  ${toRight};
       cursor: pointer;
 
+      :hover{
+        transform: scale(1.05);
+      }
+
+      @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
       :active{
         box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
@@ -69,7 +78,7 @@ export const Container = styled.div<ContainerProps>`
         padding: 1rem;
       }
 
-      
+
 
       .comprar{
         margin: 0 auto;
@@ -85,7 +94,7 @@ export const Container = styled.div<ContainerProps>`
         position: relative;
         z-index: 100;
 
-        animation: fadeIn 1s;
+        animation: fadein 1s;
         border-radius: 4px;
       }
 `
