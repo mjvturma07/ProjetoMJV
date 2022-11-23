@@ -14,9 +14,10 @@ export const Main = styled.main`
     background: radial-gradient(118.65% 107.05% at 75.38% 59.24%, #F54646 0%, #980C0C 62.86%);
 
     color: var(--color-text-in-primary);
+    overflow: hidden;
 
     #mockup{
-        height: 53rem;
+        height: 56.9rem;
         width: 54.9rem;
     }
 
