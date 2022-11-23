@@ -53,12 +53,12 @@ export default function Timer_section(){
                         <h3>Ofertas especiais em:</h3>
 
                         <section>
-                            <p><span className='number'>{days}</span> <br/> Dias</p>
+                            <p><span className='number'>{days}</span> Dias</p>
                             
-                            <p><span className='number'>{hours}</span> <br/> Horas</p>
-                            <p><span className='number'>{minutes}</span> <br/> Minutos</p>
+                            <p><span className='number'>{hours}</span> Horas</p>
+                            <p><span className='number'>{minutes}</span> Minutos</p>
                             
-                            <p><span className='number'>{seconds}</span> <br/> Segundos</p>
+                            <p><span className='number'>{seconds}</span> Segundos</p>
                         </section>
                     </main>
 

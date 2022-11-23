@@ -23,6 +23,9 @@ export const Market = styled.section`
     width: 100vw;
 
     padding: 7rem 10rem;
+    .timerdiv{
+        width: 100%;
+    }
 
 `
 

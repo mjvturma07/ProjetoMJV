@@ -17,6 +17,7 @@ export const SearchContainer = styled.section`
                 gap: 1.4rem;
 
                 margin-right: 7rem;
+                margin-left:25rem;
                 h2{
                         color: var(--color-primary);
                         font-weight: bold;
@@ -28,6 +29,8 @@ export const SearchContainer = styled.section`
                 }
 
                 p{
+                        display: flex;
+                        align-items: center;
                         margin-inline: 1rem;
                         color: #64AD5E;
                         font-weight: 800;
@@ -37,6 +40,8 @@ export const SearchContainer = styled.section`
                         font-size: 3rem;
                         font-weight: bold;
                         color: var(--color-primary);
+                        text-align:center;
+                        margin-right: .5rem;
                 }
         }
 

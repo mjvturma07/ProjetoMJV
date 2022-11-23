@@ -1,4 +1,3 @@
-import Input from "../../input";
 import { BenefitsContainer } from "./style";
 
 export default function Benefits_section(){

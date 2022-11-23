@@ -1,4 +1,3 @@
-import Input from "../../input";
 import { DestaqueContainer } from "./style";
 import productProps from "../../../utility/productDTO";
 import {useState, useEffect,useRef} from "react"
