@@ -20,11 +20,7 @@ export const Container = styled.div`
         form{
             background: white;
             border-radius: .5rem;
-
             border: 1px solid rgba(255, 255, 255, 0.11);
-
-            
-
             padding: 2rem;
             width: 49rem;
             height: 34rem;
@@ -40,6 +36,7 @@ export const Container = styled.div`
             transform: translate(50%,-50%);
             top: 50%;
             right: 50%;
+            z-index: 100;
         }
 
         legend{

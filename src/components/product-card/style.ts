@@ -43,7 +43,7 @@ export const Container = styled.div<ContainerProps>`
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
 
-        height: 19.1rem;
+        height: 18.25rem;
         width: 100%;
       }
 
