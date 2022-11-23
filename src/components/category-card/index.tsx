@@ -12,14 +12,14 @@ export default function Category_card({categoryTitle,productQuantity,imgLink}:ca
         <Container>
 
             <header>
-                <h2>{categoryTitle}</h2>
+                <h2 className="categoryTitle">{categoryTitle}</h2>
                 <a href="#">
                     <h3>Ver tudo</h3>
                 </a>
             </header>
 
             <section>
-                <img loading="lazy" width={150} height={150} src={imgLink} alt="" />
+                <img loading="lazy" width={150} height={112.5} src={imgLink} alt="" />
             </section>
 
         </Container>

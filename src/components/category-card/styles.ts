@@ -24,7 +24,7 @@ export const Container = styled.section`
 
     margin-right:4rem;
 
-    h2{
+    header h2{
         font-size: 2rem;
         position: absolute;
         font-weight: 400;
