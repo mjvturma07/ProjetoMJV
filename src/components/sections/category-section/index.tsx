@@ -8,7 +8,11 @@ interface categoriesProps{
     name: string,
 }
 
-export default function Category_section(){
+interface categorySection{
+    title:string
+}
+
+export default function Category_section({title}:categorySection){
 
     const [categoriesData, setCategoriesData] = useState<categoriesProps[]>()
 
@@ -31,7 +35,7 @@ export default function Category_section(){
             <section className="productheader">
 
                 <div className="flexrow">
-                    <h2>Categorias</h2>
+                    <h2>{title}</h2>
                     <button>Todas as categorias ➩</button>
                 </div>
 
@@ -45,6 +49,7 @@ export default function Category_section(){
                         return (
                             <Category_card
                             key={category.id}
+                            navigateLink={category.id}
                             categoryTitle={category.name}
                             imgLink={category.image}
                             />
@@ -59,6 +64,7 @@ export default function Category_section(){
                         return (
                             <Category_card
                             key={category.id}
+                            navigateLink={category.id}
                             categoryTitle={category.name}
                             imgLink={category.image}
                             />

@@ -1,21 +1,25 @@
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 
 interface categoryCardProps{
     categoryTitle: string,
     productQuantity?: string,
     imgLink: string,
+    navigateLink: number,
 }
 
-export default function Category_card({categoryTitle,productQuantity,imgLink}:categoryCardProps){
+export default function Category_card({categoryTitle,productQuantity,imgLink,navigateLink}:categoryCardProps){
 
     return(
         <Container>
 
             <header>
                 <h2 className="categoryTitle">{categoryTitle}</h2>
-                <a href="#">
+
+                <Link to={`/categorias/${navigateLink}`}>
                     <h3>Ver tudo</h3>
-                </a>
+                </Link>
+
             </header>
 
             <section>

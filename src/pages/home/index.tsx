@@ -31,7 +31,7 @@ export default function Home(){
 
 
                     <Destaque_section/>
-                    <Category_section/>
+                    <Category_section title="categorias"/>
                     <Novidade_section/>
                     
                 </Market>
