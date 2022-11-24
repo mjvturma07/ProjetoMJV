@@ -31,7 +31,6 @@ export default function CategoryPage(){
         }
 
         getSingleCategoryData()
-        console.log(singleCategoryData)
 
     },[categoryId,categoryProductsPage])
 
