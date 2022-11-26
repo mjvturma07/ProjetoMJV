@@ -13,36 +13,27 @@ interface categorySection{
 }
 
 export default function Category_section({title}:categorySection){
-
     const [categoriesData, setCategoriesData] = useState<categoriesProps[]>()
 
     useEffect(()=>{
-
-        async function getNovidadesData(){
+        (async function getNovidadesData(){
 
             await fetch(`https://api.escuelajs.co/api/v1/categories`, 
             {method: 'GET',})
             .then((res )=> res.json())
             .then((data) => setCategoriesData(data))
 
-        }
-        getNovidadesData()
+        })();
     },[])
     return(
-        
         <Container>
-
             <section className="productheader">
-
                 <div className="flexrow">
                     <h2>{title}</h2>
-                    <button>Todas as categorias ➩</button>
                 </div>
-
             </section>
 
-            <section className="categoryDivCol">
-
+            <div className="categoryDivCol">
                 <section className="categoryDivRow">
                 
                     {categoriesData?.slice(0,3).map(category => {
@@ -71,9 +62,8 @@ export default function Category_section({title}:categorySection){
                         )
                     })}
 
-                </section>  
-            </section>
-
+                </section>
+            </div>
         </Container>
     )
 }

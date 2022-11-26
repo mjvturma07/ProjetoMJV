@@ -86,7 +86,9 @@ export default function Login(){
         if (loginSuces){
             setloginSucess(false)
             setUserData(undefined)
-        } else { setClosed("LoginScreenOpen")}
+        } else { 
+            setClosed("LoginScreenOpen")
+        }
     }
     
     return(

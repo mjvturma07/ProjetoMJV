@@ -13,9 +13,7 @@ export default function Novidade_section(){
     }
 
     useEffect(()=>{
-
-        async function getNovidadesData(){
-
+        (async function getNovidadesData(){
             let products = pageNovidades * 8
 
             if (products === 1) {
@@ -26,70 +24,66 @@ export default function Novidade_section(){
             {method: 'GET',})
             .then((res )=> res.json())
             .then((data) => setnovidadeProductsData(data))
+        })();
 
-        }
-
-            getNovidadesData()
-  
     },[pageNovidades])
 
 
     return(
         <NovidadeContainer>
-                    <section className="productheader">
+            <section className="productheader">
 
-                        <div className="flexrow">
-                            <h2>Novidades</h2>
-                            <button>Ver todas as novidades ➩</button>
-                        </div>
+                <div className="flexrow">
+                    <h2>Novidades</h2>
+                </div>
 
-                        <div className="flexrow">
+                <div className="flexrow">
 
-                            <h3>Pagina: {pageNovidades}</h3>
+                    <h3>Pagina: {pageNovidades}</h3>
 
-                            <button className="pageArrow" onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
-                                {"<"}
-                            </button>
+                    <button className="pageArrow" onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
+                        {"<"}
+                    </button>
 
-                            <button className="pageArrow" onClick={ ()=> setPageNovidades(pageNovidades + 1)}>
-                                {">"}
-                            </button>
+                    <button className="pageArrow" onClick={ ()=> setPageNovidades(pageNovidades + 1)}>
+                        {">"}
+                    </button>
                             
-                        </div>
+                </div>
 
-                    </section>
+            </section>
                     
-                    <section className="products">
-                        {
-                            novidadeProductsData?.slice(0,4).map((product) => {
-                                return(
-                                <ProductCard
-                                category={product.category.name}
-                                image={product.images[0]}
-                                price={product.price}
-                                title={capitalizeFirstLetter(product.title)}
-                                key={product.id}
-                                />
-                                )
-                            })
-                        }
-                    </section>
+            <section className="products">
+                {
+                    novidadeProductsData?.slice(0,4).map((product) => {
+                        return(
+                            <ProductCard
+                            category={product.category.name}
+                            image={product.images[0]}
+                            price={product.price}
+                            title={capitalizeFirstLetter(product.title)}
+                            key={product.id}
+                            />
+                            )
+                    })
+                }
+            </section>
 
-                    <section className="products">
-                        {
-                            novidadeProductsData?.slice(4,8).map((product) => {
-                                return(
-                                <ProductCard
-                                category={product.category.name}
-                                image={product.images[0]}
-                                price={product.price}
-                                title={capitalizeFirstLetter(product.title)}
-                                key={product.id}
-                                />
-                                )
-                            })
-                        }
-                    </section>
+            <section className="products">
+                {
+                    novidadeProductsData?.slice(4,8).map((product) => {
+                        return(
+                            <ProductCard
+                            category={product.category.name}
+                            image={product.images[0]}
+                            price={product.price}
+                            title={capitalizeFirstLetter(product.title)}
+                            key={product.id}
+                            />
+                            )
+                        })
+                }
+            </section>
         </NovidadeContainer>
     )
 }

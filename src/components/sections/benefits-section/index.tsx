@@ -3,9 +3,7 @@ import { BenefitsContainer } from "./style";
 export default function Benefits_section(){
     return(
         <BenefitsContainer id="benefit">
-
                     <h2>Conheça as vantagens de comprar no <strong className="bold">AquiExpress</strong></h2>
-
                     <ul>
                         <li>
                             <img loading="lazy" src="/truck.png" alt="red truck" />
@@ -30,8 +28,7 @@ export default function Benefits_section(){
                                 <p>Estamos online 24/7 para te ajudar</p>
                             </div>
                         </li>
-                    </ul>
-                    
+                    </ul>   
         </BenefitsContainer>
     )
 }

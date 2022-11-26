@@ -16,6 +16,11 @@ export const Header = styled.header`
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
+        a{
+            text-decoration: none;
+            color: var(--color-text);
+        }
         
         img{
             margin-bottom: 1rem;
