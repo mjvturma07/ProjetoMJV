@@ -3,11 +3,8 @@ import styled from "styled-components";
 export const NovidadeContainer = styled.section`
     display: flex;
     flex-direction: column;
-
     width: 100%;
-
     margin-top: 4rem;
-
     h2{
         font-weight: 600;
         font-size: 25px;
@@ -37,9 +34,10 @@ export const NovidadeContainer = styled.section`
         }
 
         .pageArrow{
-            background-color: #B3BAC552;
+            background-color: #B3BAC512;
             padding: 1rem 1.5rem;
             border-radius: 50%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
     }
 `

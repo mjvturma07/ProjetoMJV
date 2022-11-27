@@ -1,57 +1,59 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { Container , Main } from "./styles"
 import Category_section from "../../components/sections/category-section"
 import Header_section from "../../components/sections/header-section"
-import { Container , Main } from "./styles"
-import { useParams, useSearchParams } from "react-router-dom"
 import productProps from "../../utility/productDTO"
 import ProductCard from "../../components/product-card"
+import Footer_section from "../../components/sections/footer-section"
 
 export default function CategoryPage(){
 
     const [singleCategoryData, setSingleCategoryData] = useState<productProps[]>([])
     const [categoryProductsPage, setCategoryProductsPage] = useState(0)
-    const {categoryId} =  useParams();
+    const [disabled, setDisabled] = useState(false)
+
+    const {categoryId} =  useParams(); // Get param of URL to dinamicly to render page
     
+    // Some products title are coming in capital letter and some not, this is to padronize
 
     function capitalizeFirstLetter(string:string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
     useEffect(() => {
+        window.scrollTo(0,0); // Router-Dom link doesnt get to top of page, so i setted it manually
 
-        window.scrollTo(0,0)
-
-        async function getSingleCategoryData(){
-
+        (async function getSingleCategoryData(){
             await fetch(`https://api.escuelajs.co/api/v1/categories/${categoryId}/products`, 
             {method: 'GET',})
             .then((res )=> res.json())
             .then((data) => setSingleCategoryData(data))
-
-        }
-
-        getSingleCategoryData()
-        console.log(singleCategoryData)
+        })();
 
     },[categoryId,categoryProductsPage])
 
     function nextPage(){
         setCategoryProductsPage(categoryProductsPage + 4)
+        let numberPages =  Math.round(singleCategoryData.length)
+        if (categoryProductsPage > numberPages -8 ){
+            setDisabled(true)
+        }
+        
     }
 
     function previousPage(){
         if (categoryProductsPage!=0){
             setCategoryProductsPage(categoryProductsPage - 4)
+            setDisabled(false)
         }
     }
-
 
     return(
         <>
         <Header_section/>
         
         <Container>
-        
             <Main>
 
             <section className="productheader">
@@ -60,12 +62,12 @@ export default function CategoryPage(){
                         </div>
 
                         <div className="flexrow">
-                                <button className="pageArrow" onClick={ ()=> {
+                                <button disabled={categoryProductsPage === 0 ? true : false} className="pageArrow" onClick={ ()=> {
                                     previousPage()}
                                 }>
                                 {"<"}
                             </button>
-                            <button className="pageArrow" onClick={ ()=>{
+                            <button disabled={ disabled ? true : false} className="pageArrow" onClick={ ()=>{
                                nextPage()}
                                 }
                                  >
@@ -74,27 +76,27 @@ export default function CategoryPage(){
                         </div>
             </section>
                 
-                <section className="products">
-                        {   
-                            singleCategoryData?.slice(categoryProductsPage,categoryProductsPage +4).map((product) => {
-                                return(
-                                <ProductCard
-                                category={product.category.name}
-                                image={product.images[0]}
-                                price={product.price}
-                                title={capitalizeFirstLetter(product.title)}
-                                key={product.id}
-                                />
-                                )
-                            })
-                        }
-                </section>
+            <section className="products">
+                    {   
+                        singleCategoryData?.slice(categoryProductsPage,categoryProductsPage +4).map((product) => {
+                            return(
+                            <ProductCard
+                            category={product.category.name}
+                            image={product.images[0]}
+                            price={product.price}
+                            title={capitalizeFirstLetter(product.title)}
+                            key={product.id}
+                            />
+                            )
+                        })
+                    }
+            </section>
 
-                <Category_section title="Ver outras categorias"/>
+            <Category_section title="Ver outras categorias"/>
+
             </Main>
-
         </Container>
+        <Footer_section/>
         </>
-
     )
 }

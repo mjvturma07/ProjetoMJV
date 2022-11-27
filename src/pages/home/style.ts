@@ -19,7 +19,7 @@ export const Market = styled.section`
     justify-content: flex-start;
     align-items: flex-start;
 
-    height: 120rem;
+    height: 100%;
     width: 100vw;
 
     padding: 7rem 10rem;
