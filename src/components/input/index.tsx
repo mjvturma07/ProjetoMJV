@@ -6,10 +6,11 @@ interface inputProps{
     label: string, 
     type: string, 
     name: string, 
-    children?: ReactNode
+    children?: ReactNode,
+    value?: string
 }
 
-export default function Input({id, label, type, name, children}:inputProps){
+export default function Input({id, label, type, name, children, value}:inputProps){
     return(
         <Container id={id} >
 
@@ -18,6 +19,7 @@ export default function Input({id, label, type, name, children}:inputProps){
                 name={name} 
                 placeholder= ' ' 
                 aria-label={name}
+                defaultValue={value}
             />
 
             <label htmlFor={id}>{label}</label>

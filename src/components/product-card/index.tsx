@@ -7,21 +7,15 @@ interface inputProps{
     category:string,
     price: number,
     key: number,
+    description?: string,
 }
 
-export default function ProductCard({image, title, category, price}:inputProps){
-    const [cardOpen, setCardOpen] = useState(false)
-
-    function openCard(){
-        if (!cardOpen){
-            setCardOpen(true)
-        } else {
-            setCardOpen(false)
-        }
-    }
+export default function ProductCard({image, title, category, price,description}:inputProps){
+    const [isShown, setIsShown] = useState(false);
 
     return(
-        <Container onClick={openCard} open={cardOpen}>
+        <Container onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}>
             
             <img loading="lazy" src={image}alt={title} />
 
@@ -29,7 +23,8 @@ export default function ProductCard({image, title, category, price}:inputProps){
                 <h2 className="category">{category}</h2>
                 <h3 className="title">{title}</h3>
                 <h4>R$ {price},00</h4>
-                { cardOpen && <button onClick={()=>{}} className="comprar">Comprar agora</button> }
+                { isShown && <p>{description}</p> }
+                { isShown && <button onClick={()=>{}} className="comprar">Comprar agora</button> }
             </section>
             
         </Container>

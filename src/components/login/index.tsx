@@ -3,6 +3,7 @@ import { Container } from "./style";
 
 import  { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
+import { Link, Navigate } from "react-router-dom";
 
 interface userData{
     id:number,
@@ -43,7 +44,10 @@ export default function Login(){
                 res.json()
 
             )
-            }).then(res => setAuthToken(res.access_token))
+            }).then(res => {
+                sessionStorage.setItem("admintoken", res.access_token);
+                setAuthToken(res.access_token)
+            })
         }
 
 
@@ -63,11 +67,20 @@ export default function Login(){
                 .then(res => setUserData(res))
                 }
 
-                //Verification to not getdata withoud token aplication build
+                //Verification to not getdata withoud token aplication on build
 
                 if (authToken != ''){
                     getUserData()
                 }
+
+                let tokencookie = sessionStorage.getItem("admintoken")
+
+                if(tokencookie){
+                    setAuthToken(tokencookie)
+                    setloginSucess(true)
+                }
+
+                
                 
         },[authToken])
             
@@ -86,6 +99,8 @@ export default function Login(){
         if (loginSuces){
             setloginSucess(false)
             setUserData(undefined)
+            sessionStorage.removeItem("admintoken");
+            window.location.pathname = "/"
         } else { 
             setClosed("LoginScreenOpen")
         }
@@ -94,8 +109,9 @@ export default function Login(){
     return(
         <Container>
 
-            {userData?.name != undefined ? <p>Bem-vindo {userData.name}</p>: ''}
-            
+            {userData?.name === "Admin" ? <Link to={`/admin`}>Acessar Painel</Link> : ''}
+            {userData?.name != undefined ? <p>Bem-vindo(a), {userData.name}.</p>: ''}
+        
             <button onClick={openLoginScreen} id="login">{loginSuces ? 'Sair' : 'Entrar'}</button>
 
             <section id="formdiv">
@@ -110,12 +126,14 @@ export default function Login(){
                                 name='email'
                                 label='Insira seu e-mail'
                                 type='email'
+                                value="admin@mail.com"
                             />
                             <Input
                                 id='password'
                                 name='password'
                                 label='Senha'
                                 type='password'
+                                value="admin123"
                             />
                                     
                             { loginFailed && <h2 id="loginfailed">Usuário ou senha inválidos</h2>}

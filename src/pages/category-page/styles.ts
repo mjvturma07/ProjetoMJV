@@ -9,7 +9,7 @@ export const Container = styled.div`
     height: 120rem;
     width: 100vw;
 
-    padding: 7rem 10rem;
+    padding: 3rem 10rem;
 `
 
 export const Main = styled.section`
