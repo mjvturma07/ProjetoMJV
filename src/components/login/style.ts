@@ -149,4 +149,9 @@ export const Container = styled.div`
             margin-right: 7rem;
             font-weight:bold;
         }
+
+        a{
+            color: var(--color-text);
+            margin-right: 2rem;
+        }
 `

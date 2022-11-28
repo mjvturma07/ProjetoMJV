@@ -23,7 +23,8 @@ export const Header = styled.header`
         }
         
         img{
-            margin-bottom: 1rem;
+            margin-bottom: .3rem;
+            margin-right: 5rem;
         }
 
         ul{

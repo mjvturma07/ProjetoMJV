@@ -1,18 +1,13 @@
 import styled,{keyframes} from "styled-components";
-import { fadeInRight,fadeInLeft } from 'react-animations';
+import { fadeInRight } from 'react-animations';
 
 const toRight = keyframes`${fadeInRight}`;
 
-interface ContainerProps{
-  open: boolean
-  motion?: string,
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
       display: flex;
       flex-direction: column;
 
-      height: ${(props) => props.open ? 40 : 35 }rem;
+      height: 35rem;
       width: 30rem;
 
       border-radius: 8px;
@@ -25,9 +20,11 @@ export const Container = styled.div<ContainerProps>`
       transition: .4s ease-out;
       animation: .5s  ${toRight};
       cursor: pointer;
+      position: relative;
 
       :hover{
         transform: scale(1.05);
+        height: 50rem;
       }
 
       @keyframes fadein {
@@ -52,13 +49,13 @@ export const Container = styled.div<ContainerProps>`
         color: #959EAD;
 
         margin-top: .7rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: .5rem;
       }
 
       .title{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         color: #1B1D21;
-        line-height: 1.4rem;
+        line-height: 1.7rem;
 
         margin-bottom: 1.5rem;
       }
@@ -78,8 +75,6 @@ export const Container = styled.div<ContainerProps>`
         padding: 1rem;
       }
 
-
-
       .comprar{
         margin: 0 auto;
 
@@ -91,10 +86,19 @@ export const Container = styled.div<ContainerProps>`
 
         margin-top: 2rem;
 
-        position: relative;
+        position: absolute;
+        bottom: 0%;
+        right: 50%;
+        transform: translate(50%,-50%);
         z-index: 100;
 
         animation: fadein 1s;
         border-radius: 4px;
+      }
+      p{
+        font-size: 1.4rem;
+        font-weight: 200;
+        color: black;
+        margin-top: 1rem;
       }
 `

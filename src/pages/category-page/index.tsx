@@ -86,6 +86,7 @@ export default function CategoryPage(){
                             price={product.price}
                             title={capitalizeFirstLetter(product.title)}
                             key={product.id}
+                            description={product.description}
                             />
                             )
                         })

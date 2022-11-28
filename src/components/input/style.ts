@@ -44,7 +44,7 @@ export const Container = styled.div`
 
         font-size: 1.5rem;
 
-        transition: top 0.5s, left 0.3s ease-out;
+        transition: top 0.3s, left 0.3s ease-out;
         color: #8D8E90;
     }
 

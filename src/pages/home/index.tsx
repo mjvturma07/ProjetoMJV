@@ -10,6 +10,7 @@ import Category_section from "../../components/sections/category-section"
 import Footer_section from "../../components/sections/footer-section";
 
 export default function Home(){
+
     return(
         <Container> 
             <Header_section/>
@@ -33,10 +34,7 @@ export default function Home(){
                 <Novidade_section/>
             </Market>
             
-            <Fade direction={'right'} triggerOnce={true}>
-                <Footer_section/>
-            </Fade>
-
+            <Footer_section/>
         </Container>
     )
 } 
