@@ -8,7 +8,6 @@ import Timer_section from "../../components/sections/timer-section"
 import Header_section from "../../components/sections/header-section"
 import Category_section from "../../components/sections/category-section"
 import Footer_section from "../../components/sections/footer-section";
-import {useEffect,useState} from "react";
 
 export default function Home(){
 

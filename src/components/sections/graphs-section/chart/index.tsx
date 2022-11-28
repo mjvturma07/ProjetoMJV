@@ -50,10 +50,12 @@ export default function ChartSellByCategory(){
         }
 
     return(
+    <>  
+        
         <VictoryChart theme={VictoryTheme.material} domainPadding={20}>
 
             <VictoryLegend x={325} y={50}
-            title="Legend"
+            title="Legenda"
             centerTitle
             orientation="vertical"
             gutter={15}
@@ -121,5 +123,6 @@ export default function ChartSellByCategory(){
                 
             </VictoryStack>
         </VictoryChart>
+    </>
     )
 }
