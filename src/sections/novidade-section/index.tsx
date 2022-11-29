@@ -1,7 +1,7 @@
 import { NovidadeContainer } from "./style";
-import productProps from "../../../utility/productDTO";
+import productProps from "../../utility/productDTO";
 import {useState, useEffect} from "react"
-import ProductCard from "../../product-card";
+import ProductCard from "../../components/product-card";
 
 export default function Novidade_section(){
 

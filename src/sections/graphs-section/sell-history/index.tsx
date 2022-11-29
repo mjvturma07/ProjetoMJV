@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 import {FiArrowUp} from "react-icons/fi"
-import SellHistoryCard from "../../../sell-history-card";
+import SellHistoryCard from "../../../components/sell-history-card";
 
 export default function HistorySell(){
 

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Container , Main } from "./styles"
-import Category_section from "../../components/sections/category-section"
-import Header_section from "../../components/sections/header-section"
+import Category_section from "../../sections/category-section"
+import Header_section from "../../sections/header-section"
 import productProps from "../../utility/productDTO"
 import ProductCard from "../../components/product-card"
-import Footer_section from "../../components/sections/footer-section"
+import Footer_section from "../../sections/footer-section"
 
 export default function CategoryPage(){
 

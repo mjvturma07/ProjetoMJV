@@ -6,7 +6,6 @@ import Home from "../pages/home";
 export default function RoutesMain(){
     return(
         <Routes>
-
                 <Route index element={<Home/>}/>
                 <Route path="/categorias/:categoryId" element={<CategoryPage/>} />
                 <Route path="/admin" element={<AdminPage/>} />

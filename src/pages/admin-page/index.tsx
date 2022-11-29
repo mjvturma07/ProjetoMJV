@@ -1,8 +1,8 @@
-import Footer_section from "../../components/sections/footer-section";
-import ChartSellByCategory from "../../components/sections/graphs-section/chart";
-import Pie from "../../components/sections/graphs-section/pie";
-import HistorySell from "../../components/sections/graphs-section/sell-history";
-import Header_section from "../../components/sections/header-section";
+import Footer_section from "../../sections/footer-section";
+import ChartSellByCategory from "../../sections/graphs-section/chart";
+import Pie from "../../sections/graphs-section/pie";
+import HistorySell from "../../sections/graphs-section/sell-history";
+import Header_section from "../../sections/header-section";
 import SellHistoryCard from "../../components/sell-history-card";
 import { Container, Main } from "./styles";
 

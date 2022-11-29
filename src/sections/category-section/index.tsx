@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Category_card from "../../category-card";
+import Category_card from "../../components/category-card";
 import { Container } from "./style";
 
 interface categoriesProps{
