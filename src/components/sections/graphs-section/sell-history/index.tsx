@@ -11,32 +11,32 @@ export default function HistorySell(){
             soldDate: '13/12/2022'
         },
         {
-            name: 'Custom sleep shoes',
+            name: 'Metal wake shoes',
             soldValue: "+ R$" + Math.round(Math.random()*500) + ",00",
             soldDate: '13/12/2022'
         },
         {
-            name: 'Custom sleep shoes',
+            name: 'Custom wake dress',
             soldValue: "+ R$" + Math.round(Math.random()*500) + ",00",
             soldDate: '13/12/2022'
         },
         {
-            name: 'Custom sleep shoes',
+            name: 'Metal wake dress',
             soldValue: "+ R$" + Math.round(Math.random()*500) + ",00",
             soldDate: '13/12/2022'
         },
         {
-            name: 'Custom sleep shoes',
+            name: 'Cotton sleep shoes',
             soldValue: "+ R$" + Math.round(Math.random()*500) + ",00",
             soldDate: '13/12/2022'
         },
         {
-            name: 'Custom sleep shoes',
+            name: 'Custom wake dress',
             soldValue: "+ R$" + Math.round(Math.random()*500) + ",00",
             soldDate: '13/12/2022'
         },
         {
-            name: 'Custom sleep shoes',
+            name: 'Cotton sleep shoes',
             soldValue: "+ R$" + Math.round(Math.random()*500) + ",00",
             soldDate: '13/12/2022'
         }

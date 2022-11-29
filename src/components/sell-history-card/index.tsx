@@ -2,7 +2,7 @@ import { Container } from "./stytles";
 import { FiShoppingCart,FiCalendar } from "react-icons/fi";
 
 interface sellHistoryCardProps{
-    productName: string,
+    productName?: string,
     productPrice: string,
     productSellDate: string,
 }
