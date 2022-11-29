@@ -1,4 +1,4 @@
-import Login from "../../login";
+import Login from "../../components/login";
 import { Header } from "./style";
 import { FiChevronDown } from "react-icons/fi";
 import { Link } from "react-router-dom";

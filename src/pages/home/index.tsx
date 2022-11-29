@@ -1,13 +1,13 @@
 import { Fade } from "react-awesome-reveal";
 import { Container, Market } from "./style"
-import Main_section from "../../components/sections/main-section"
-import Benefits_section from "../../components/sections/benefits-section"
-import Destaque_section from "../../components/sections/destaque-section"
-import Novidade_section from "../../components/sections/novidade-section"
-import Timer_section from "../../components/sections/timer-section"
-import Header_section from "../../components/sections/header-section"
-import Category_section from "../../components/sections/category-section"
-import Footer_section from "../../components/sections/footer-section";
+import Main_section from "../../sections/main-section"
+import Benefits_section from "../../sections/benefits-section"
+import Destaque_section from "../../sections/destaque-section"
+import Novidade_section from "../../sections/novidade-section"
+import Timer_section from "../../sections/timer-section"
+import Header_section from "../../sections/header-section"
+import Category_section from "../../sections/category-section"
+import Footer_section from "../../sections/footer-section";
 
 export default function Home(){
 

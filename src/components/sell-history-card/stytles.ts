@@ -7,6 +7,7 @@ export const Container = styled.div`
     border-radius: 5px;
     position: relative;
     margin-bottom: 1rem;
+    width: 30rem;
     .green{
         color: var(--color-success);
         font-weight: bold;
@@ -29,4 +30,11 @@ export const Container = styled.div`
         right: 5%;
         font-size: 1.8rem;
     }
+    :hover{
+        transform: scale(1.05);
+    }
+
+    & + &{
+        margin-left: 1rem;
+    } 
 `
