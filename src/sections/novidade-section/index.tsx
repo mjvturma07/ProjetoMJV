@@ -63,6 +63,7 @@ export default function Novidade_section(){
                             price={product.price}
                             title={capitalizeFirstLetter(product.title)}
                             key={product.id}
+                            id={product.id}
                             description={product.description}
                             />
                             )
@@ -80,6 +81,7 @@ export default function Novidade_section(){
                             price={product.price}
                             title={capitalizeFirstLetter(product.title)}
                             key={product.id}
+                            id={product.id}
                             description={product.description}
                             />
                             )
