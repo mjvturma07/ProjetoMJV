@@ -18,14 +18,16 @@ export default function ProductPage(){
     }
 
     useEffect(() => {
-        window.scrollTo(0,0); // Router-Dom link doesnt get to top of page, so i setted it manually
-
         (async function getSingleCategoryData(){
             await fetch(`https://api.escuelajs.co/api/v1/products/${productId}`, 
             {method: 'GET',})
             .then((res )=> res.json())
             .then((data) => setSingleProductData(data))
         })();
+
+        setTimeout(()=>{
+            window.scrollTo(0,0); // Router-Dom link doesnt get to top of page, so i setted it manually, timeout to avoid bugs
+        },80)
 
     },[productId])
 
