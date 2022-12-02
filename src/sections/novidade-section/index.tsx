@@ -25,7 +25,6 @@ export default function Novidade_section(){
             .then((res )=> res.json())
             .then((data) => setnovidadeProductsData(data))
         })();
-
     },[pageNovidades])
 
 
@@ -38,8 +37,7 @@ export default function Novidade_section(){
                 </div>
 
                 <div className="flexrow">
-
-                    <h3>Pagina: {pageNovidades}</h3>
+                    <h3>Pagina: {pageNovidades + 1}</h3>
 
                     <button className="pageArrow" onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
                         {"<"}
@@ -47,8 +45,7 @@ export default function Novidade_section(){
 
                     <button className="pageArrow" onClick={ ()=> setPageNovidades(pageNovidades + 1)}>
                         {">"}
-                    </button>
-                            
+                    </button>      
                 </div>
 
             </section>
@@ -63,6 +60,7 @@ export default function Novidade_section(){
                             price={product.price}
                             title={capitalizeFirstLetter(product.title)}
                             key={product.id}
+                            id={product.id}
                             description={product.description}
                             />
                             )
@@ -80,6 +78,7 @@ export default function Novidade_section(){
                             price={product.price}
                             title={capitalizeFirstLetter(product.title)}
                             key={product.id}
+                            id={product.id}
                             description={product.description}
                             />
                             )

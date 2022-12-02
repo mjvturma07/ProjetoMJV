@@ -1,7 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 import { Container, Market } from "./style"
 import Main_section from "../../sections/main-section"
-import Benefits_section from "../../sections/benefits-section"
+import Benefits_section from "../../sections/chrismas-section"
 import Destaque_section from "../../sections/destaque-section"
 import Novidade_section from "../../sections/novidade-section"
 import Timer_section from "../../sections/timer-section"

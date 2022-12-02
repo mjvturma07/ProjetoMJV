@@ -40,7 +40,7 @@ export const Container = styled.div`
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
 
-        height: 18.25rem;
+        height: 18.525rem;
         width: 100%;
       }
 
@@ -50,6 +50,7 @@ export const Container = styled.div`
 
         margin-top: .7rem;
         margin-bottom: .5rem;
+        font-weight: bold;
       }
 
       .title{
@@ -100,5 +101,10 @@ export const Container = styled.div`
         font-weight: 200;
         color: black;
         margin-top: 1rem;
+      }
+      a{
+        text-decoration: none;
+        list-style: none;
+        font-style: normal;
       }
 `

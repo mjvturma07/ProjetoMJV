@@ -10,7 +10,7 @@ export default createGlobalStyle`
     --color-tertiary:  #B3BAC5;
     --color-border: rgba(255, 255, 255, 0.2);
     --color-success: #7CC39C;
-    --color-warning: #FBEA85;
+    --color-warning: #FEFF65;
     --color-error: #EA524F;
 
     //Reduce font-seize for better utilization of REM unit

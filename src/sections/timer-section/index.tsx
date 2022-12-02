@@ -8,7 +8,7 @@ export default function Timer_section(){
     const [minutes,setMinutes] = useState('')
     const [seconds,setSeconds] = useState('')
     
-    var x = setInterval(function() {
+    var timer = setInterval(function() {
     var countDownDate = new Date('Dec 25, 2022 00:00:00').getTime()
     var now = new Date().getTime()
     var distance = countDownDate - now

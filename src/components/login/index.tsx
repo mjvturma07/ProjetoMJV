@@ -72,16 +72,12 @@ export default function Login(){
                 if (authToken != ''){
                     getUserData()
                 }
-
                 let tokencookie = sessionStorage.getItem("admintoken")
-
                 if(tokencookie){
                     setAuthToken(tokencookie)
                     setloginSucess(true)
                 }
 
-                
-                
         },[authToken])
             
 

@@ -1,32 +1,35 @@
 import {Container} from "./style"
 import {useState} from "react"
+import { Link } from "react-router-dom";
 
-interface inputProps{
+interface productProps{
     image: string,
     title:string,
     category:string,
     price: number,
     key: number,
+    id: number,
     description?: string,
 }
 
-export default function ProductCard({image, title, category, price,description}:inputProps){
+export default function ProductCard({image, title, category, price,description,id}:productProps){
     const [isShown, setIsShown] = useState(false);
 
     return(
-        <Container onMouseEnter={() => setIsShown(true)}
-        onMouseLeave={() => setIsShown(false)}>
-            
-            <img loading="lazy" src={image}alt={title} />
+        <Link to={`/produto/${id}`} style={{textDecoration: 'none'}}>
+            <Container onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}>
+                  
+                <img loading="lazy" src={image}alt={title} />
 
-            <section className="text">
-                <h2 className="category">{category}</h2>
-                <h3 className="title">{title}</h3>
-                <h4>R$ {price},00</h4>
-                { isShown && <p>{description}</p> }
-                { isShown && <button onClick={()=>{}} className="comprar">Comprar agora</button> }
-            </section>
-            
-        </Container>
+                <section className="text">
+                    <h2 className="category">{category}</h2>
+                    <h3 className="title">{title}</h3>
+                    <h4>R$ {price},00</h4>
+                    { isShown && <p>{description}</p> }
+                    { isShown && <button onClick={()=>{}} className="comprar">Comprar agora</button> }
+                </section>
+            </Container>
+        </Link>
     )
 }

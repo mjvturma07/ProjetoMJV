@@ -30,12 +30,13 @@ export const NovidadeContainer = styled.section`
 
         button{
             color: var(--color-primary);
+            font-weight: bold;
             margin-left: 1.5rem;
         }
 
         .pageArrow{
-            background-color: #B3BAC512;
-            padding: 1rem 1.5rem;
+            background-color: #B3BAC532;
+            padding: .8rem 1.5rem;
             border-radius: 50%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }

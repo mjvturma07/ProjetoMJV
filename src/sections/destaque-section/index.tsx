@@ -13,9 +13,7 @@ export default function Destaque_section(){
 
     useEffect(()=>{
         (async function getDestaqueData(){
- 
             let products = pageDestaques * 4
-
             if (products === 1) {
                 products = 0
             }
@@ -33,7 +31,7 @@ export default function Destaque_section(){
                 </div>
 
                 <div className="flexrow">
-                    <h3>Pagina: {pageDestaques}</h3>
+                    <h3>Pagina: {pageDestaques + 1}</h3>
                         <button className="pageArrow" onClick={ ()=> {
                             pageDestaques != 0 ? setPageDestaques(pageDestaques -1) : ''}
                         }
@@ -59,6 +57,7 @@ export default function Destaque_section(){
                         price={product.price}
                         title={capitalizeFirstLetter(product.title)}
                         key={product.id}
+                        id={product.id}
                         description={product.description}
                         />
                         )
