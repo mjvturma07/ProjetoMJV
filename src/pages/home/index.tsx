@@ -9,6 +9,7 @@ import Header_section from "../../sections/header-section"
 import Category_section from "../../sections/category-section"
 import Footer_section from "../../sections/footer-section";
 
+
 export default function Home(){
 
     return(
@@ -20,6 +21,7 @@ export default function Home(){
             </Fade>
 
             <Market>
+                    {/* <LogoCube/> */}
                 <Fade direction={'down'} className="timerdiv">
                     <Timer_section/>
                 </Fade>

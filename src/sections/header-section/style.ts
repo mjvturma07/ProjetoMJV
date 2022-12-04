@@ -10,6 +10,8 @@ export const Header = styled.header`
     height: 9rem;
 
     color: var(--color-text);
+    position: relative;
+    z-index: 120;
     
     nav{
         display: flex;
@@ -47,10 +49,6 @@ export const Header = styled.header`
                 align-items: center;
                 gap: 1rem;
             }
-        }
-
-        #downarrow{
-            cursor: pointer;
         }
     }
 `
