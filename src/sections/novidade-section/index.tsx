@@ -39,7 +39,7 @@ export default function Novidade_section(){
 
                 <div className="flexrow">
 
-                    <h3>Pagina: {pageNovidades}</h3>
+                    <h3>Pagina: {pageNovidades +1}</h3>
 
                     <button className="pageArrow" onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
                         {"<"}
