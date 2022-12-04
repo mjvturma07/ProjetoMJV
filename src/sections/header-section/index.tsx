@@ -1,10 +1,32 @@
 import Login from "../../components/login";
 import { Header } from "./style";
-import { FiChevronDown } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { Slide } from "react-awesome-reveal";
+import { Dropdown } from "../../components/dropdown";
 
 export default function Header_section(){
+    const itemCategorias = [
+        {
+            name: "Clothes",
+            path: "/categorias/1"
+        },
+        {
+            name: "Eletronics",
+            path: "/categorias/2"
+        },
+        {
+            name: "Furnitures",
+            path: "/categorias/3"
+        },
+        {
+            name: "Shoes",
+            path: "/categorias/4"
+        },
+        {
+            name: "Others",
+            path: "/categorias/5"
+        },
+    ]
     return(
         <Header>
             <nav>
@@ -25,8 +47,7 @@ export default function Header_section(){
                         </li>
 
                         <li>
-                            <button>Categorias</button>
-                            <FiChevronDown id="downarrow"/>
+                            <Dropdown title="Categorias" items={itemCategorias}/>
                         </li>
                     </ul>
                 </Slide>

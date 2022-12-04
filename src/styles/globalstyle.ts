@@ -65,6 +65,10 @@ export default createGlobalStyle`
     transform: scale(1.05);
   }
 
+  a:hover{
+    transform: scale(1.05);
+  }
+
   li{
     list-style: none;
   }
