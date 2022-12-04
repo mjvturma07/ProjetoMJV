@@ -8,8 +8,11 @@ export const Container = styled.div`
 
     background-color: var(--color-primary);
     border-radius:50%;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     :hover{
         transform: scale(1.05);
     }
