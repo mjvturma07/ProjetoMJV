@@ -35,11 +35,13 @@ Pacotes utilizados:
 
 Documentações das tecnologias e pacotes utilizados:
 
-https://reactjs.org/docs/getting-started.html React
-https://www.typescriptlang.org/docs/ Typescript
-https://reactrouter.com/en/main react-router-dom
-https://formidable.com/open-source/react-animations/#:~:text=A%20collection%20of%20animations%20that,css. react-animations
-https://react-awesome-reveal.morello.dev/ react-awesome-reveal
-https://react-icons.github.io/react-icons/ react-icons
-https://styled-components.com/docs styled-components
+https://reactjs.org/docs/getting-started.html React <br/>
+https://www.typescriptlang.org/docs/ Typescript <br/>
+https://reactrouter.com/en/main react-router-dom <br/>
+https://formidable.com/open-source/react-animations/#:~:text=A%20collection%20of%20animations%20that,css. react-animations <br/>
+https://react-awesome-reveal.morello.dev/ react-awesome-reveal <br/>
+https://react-icons.github.io/react-icons/ react-icons <br/>
+https://styled-components.com/docs styled-components <br/>
 https://formidable.com/open-source/victory/docs/ victory
+
+Obs: Por causa de questões de tempo de entrega do projeto, a responsividade para tablets e para mobile não foi levada em consideração, sendo colocada como um possível feature e melhoria futura.
