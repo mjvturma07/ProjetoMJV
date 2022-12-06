@@ -8,6 +8,7 @@ import Timer_section from "../../sections/timer-section"
 import Header_section from "../../sections/header-section"
 import Category_section from "../../sections/category-section"
 import Footer_section from "../../sections/footer-section";
+import Back_to_top from "../../components/back-to-top";
 
 
 export default function Home(){
@@ -36,6 +37,7 @@ export default function Home(){
                 <Novidade_section/>
             </Market>
             
+            <Back_to_top/>
             <Footer_section/>
         </Container>
     )

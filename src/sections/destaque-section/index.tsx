@@ -33,7 +33,7 @@ export default function Destaque_section(){
                 </div>
 
                 <div className="flexrow">
-                    <h3>Pagina: {pageDestaques}</h3>
+                    <h3>Pagina: {pageDestaques +1}</h3>
                         <button className="pageArrow" onClick={ ()=> {
                             pageDestaques != 0 ? setPageDestaques(pageDestaques -1) : ''}
                         }

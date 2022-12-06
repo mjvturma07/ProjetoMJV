@@ -3,7 +3,7 @@ import { Container } from "./style";
 
 import  { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface userData{
     id:number,

@@ -34,7 +34,7 @@ export const Container = styled.div`
         #formdiv{
             position: absolute;
             transform: translate(50%,-50%);
-            top: 50%;
+            top: 350%;
             right: 50%;
             z-index: 100;
         }

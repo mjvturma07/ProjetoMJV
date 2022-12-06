@@ -43,7 +43,7 @@ export default function Header_section(){
                         </li>
 
                         <li>
-                            <button>Contato</button>
+                            <a href="https://wa.me/31991049113" target={"_blank"}><button>Contato</button></a>
                         </li>
 
                         <li>
