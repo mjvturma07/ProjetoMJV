@@ -25,6 +25,10 @@ export default function ProductPage(){
 
     },[produtoId])
 
+    function alert(){
+        window.alert("Isso é apenas um Demo, não é possivel finalizar a compra")
+    }
+
     return(
         <>
             <Header_section/>
@@ -38,7 +42,7 @@ export default function ProductPage(){
                             <h2>R${String(singleProductData?.price)},00 <br /></h2>
                             <h3>{String(singleProductData?.description)}</h3> <br />
                             <h4>Categoria: {String(singleProductData?.category.name)}</h4>
-                            <button className="comprar">Comprar agora</button>
+                            <button onClick={alert} className="comprar">Comprar agora</button>
                         </section>
                     </div>
 
