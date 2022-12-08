@@ -15,12 +15,15 @@ A tecnologia de estilização usada foi Styled-components
 
 Link do deploy https://aquiexpress.vercel.app/ usando Vercel ( Deploy do main )
 
+API usada https://fakeapi.platzi.com/
+DOC da API: https://fakeapi.platzi.com/doc/introduction
+
 Estrutura das pastas:
 
     Components: Inseridos na pasta Components cada pasta contém o index de seu respectivo componente junto com seu styled components.
     Section: São "Block" components, não dinamicos, apenas para clean conde e para reutilização, exemplo ( Footer e Header )
     Styles: Apenas o GlobalStyles
-    Utility: Aqui são inseridos as interfaces de tipo usadas para separação e clean code além de custom hooks e constantes para evitar magic numbers.
+    Utility: Aqui são inseridos as interfaces de tipo usadas para separação e clean code
     Routes: Aqui fica todas as rotas da aplicação
     Pages: São as páginas aonde são chamados os Components e Block components.
 
