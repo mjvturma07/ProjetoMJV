@@ -38,7 +38,7 @@ Documentações das tecnologias e pacotes utilizados:
 https://reactjs.org/docs/getting-started.html React <br/>
 https://www.typescriptlang.org/docs/ Typescript <br/>
 https://reactrouter.com/en/main react-router-dom <br/>
-https://formidable.com/open-source/react-animations/#:~:text=A%20collection%20of%20animations%20that,css. react-animations <br/>
+https://formidable.com/open-source/react-animations react-animations <br/>
 https://react-awesome-reveal.morello.dev/ react-awesome-reveal <br/>
 https://react-icons.github.io/react-icons/ react-icons <br/>
 https://styled-components.com/docs styled-components <br/>

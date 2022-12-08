@@ -1,6 +1,5 @@
 import { Container } from "./styles";
 import { FiArrowUp } from 'react-icons/fi';
-import { useState } from "react";
 
 export default function Back_to_top(){
     function goToTop(){

@@ -26,6 +26,5 @@ export const Market = styled.section`
     .timerdiv{
         width: 100%;
     }
-
 `
 
