@@ -15,12 +15,15 @@ A tecnologia de estilização usada foi Styled-components
 
 Link do deploy https://aquiexpress.vercel.app/ usando Vercel ( Deploy do main )
 
+API usada https://fakeapi.platzi.com/
+DOC da API: https://fakeapi.platzi.com/doc/introduction
+
 Estrutura das pastas:
 
     Components: Inseridos na pasta Components cada pasta contém o index de seu respectivo componente junto com seu styled components.
     Section: São "Block" components, não dinamicos, apenas para clean conde e para reutilização, exemplo ( Footer e Header )
     Styles: Apenas o GlobalStyles
-    Utility: Aqui são inseridos as interfaces de tipo usadas para separação e clean code além de custom hooks e constantes para evitar magic numbers.
+    Utility: Aqui são inseridos as interfaces de tipo usadas para separação e clean code
     Routes: Aqui fica todas as rotas da aplicação
     Pages: São as páginas aonde são chamados os Components e Block components.
 
@@ -38,7 +41,7 @@ Documentações das tecnologias e pacotes utilizados:
 https://reactjs.org/docs/getting-started.html React <br/>
 https://www.typescriptlang.org/docs/ Typescript <br/>
 https://reactrouter.com/en/main react-router-dom <br/>
-https://formidable.com/open-source/react-animations/#:~:text=A%20collection%20of%20animations%20that,css. react-animations <br/>
+https://formidable.com/open-source/react-animations react-animations <br/>
 https://react-awesome-reveal.morello.dev/ react-awesome-reveal <br/>
 https://react-icons.github.io/react-icons/ react-icons <br/>
 https://styled-components.com/docs styled-components <br/>

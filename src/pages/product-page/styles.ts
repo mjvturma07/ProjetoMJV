@@ -5,21 +5,15 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-    height: 120rem;
+    height: 110%;
     width: 100vw;
-
     padding: 3rem 10rem;
 `
 
 export const Main = styled.section`
-    
-
     display: flex;
     flex-direction: column;
-
     width: 100%;
-
     margin-top: 2rem;
     
     .products{
@@ -88,17 +82,12 @@ export const Main = styled.section`
     }
 
     .comprar{
-
         width: 20rem;
         height: 4rem;
-        
         color: var(--color-text-in-primary);
         background-color: var(--color-primary);
-
         margin-top: 4rem;
-
         z-index: 100;
-
         animation: fadein 1s;
         border-radius: 4px;
       }
