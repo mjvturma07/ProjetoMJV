@@ -107,9 +107,9 @@ export default function Login(){
     
     return(
         <Container>
-            <Slide direction="up" triggerOnce duration={400}>
+            <Slide className="loggedInfo" direction="up" triggerOnce duration={400}>
                 {userData?.name === "Admin" ? <Link to={`/admin`}>Acessar Painel</Link> : ''}
-                {userData?.name != undefined ? <p>Bem-vindo(a), {userData.name}.</p>: ''}
+                {userData?.name != undefined ? <p id="welcome">Bem-vindo(a), {userData.name}.</p>: ''}
             </Slide>
         
             <button onClick={openLoginScreen} id="login">{loginSuces ? 'Sair' : 'Entrar'}</button>

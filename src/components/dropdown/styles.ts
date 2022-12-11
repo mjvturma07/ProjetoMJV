@@ -7,7 +7,7 @@ export const Container = styled.div`
     width: 15rem;
     height: 100%;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
 
     @keyframes fadeIn {
         0% { opacity: 0; }
@@ -16,8 +16,8 @@ export const Container = styled.div`
 
     .list{
         position: absolute;
-        z-index: 1000;
-        bottom: -1150%;
+        z-index: 100;
+        top: 115%;
         right: 10%;
         background-color: var(--color-text-in-primary);
 
@@ -28,8 +28,8 @@ export const Container = styled.div`
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         animation: fadeIn .5s; 
         border-radius: 2px;
-
     }
+    
     a{
         display: flex;
         justify-content: center;
@@ -37,7 +37,7 @@ export const Container = styled.div`
         text-align: left;
         position: relative;
         width: 100%;
-        z-index: 1000;
+        z-index: 100;
         padding: .5rem 3rem;
         text-align: center;
     }
@@ -50,5 +50,12 @@ export const Container = styled.div`
     #downarrow{
         margin-bottom: -.4rem;
         font-size: 2rem;
+    }
+
+    @media (max-width: 1000px) {
+        .list{
+            right: -80%;
+            top: 6%;
+        }
     }
 `
