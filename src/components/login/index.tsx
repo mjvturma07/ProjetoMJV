@@ -4,6 +4,7 @@ import { Container } from "./style";
 import  { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { Slide } from "react-awesome-reveal";
 
 interface userData{
     id:number,
@@ -80,8 +81,6 @@ export default function Login(){
                     setloginSucess(true)
                 }
 
-                
-                
         },[authToken])
             
 
@@ -108,9 +107,10 @@ export default function Login(){
     
     return(
         <Container>
-
-            {userData?.name === "Admin" ? <Link to={`/admin`}>Acessar Painel</Link> : ''}
-            {userData?.name != undefined ? <p>Bem-vindo(a), {userData.name}.</p>: ''}
+            <Slide cascade direction="up" triggerOnce duration={400}>
+                {userData?.name === "Admin" ? <Link to={`/admin`}>Acessar Painel</Link> : ''}
+                {userData?.name != undefined ? <p>Bem-vindo(a), {userData.name}.</p>: ''}
+            </Slide>
         
             <button onClick={openLoginScreen} id="login">{loginSuces ? 'Sair' : 'Entrar'}</button>
 

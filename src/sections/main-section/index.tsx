@@ -5,7 +5,7 @@ export default function Main_section(){
         <Main>
                 <section  id="maintext">
                     <h1>AquiExpress</h1>
-                    <p>Os melhores produtos da sua região.<br/> Estamos aqui, sempre do seu lado.</p>
+                    <p>Beep beep, chegou!<br/> Estamos aqui, sempre do seu lado.</p>
                     <a href="#benefit"><button>Ver produtos</button></a>
                 </section>
 

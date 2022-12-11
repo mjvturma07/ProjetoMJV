@@ -2,6 +2,7 @@ import { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { Container } from './styles';
+import { Slide } from "react-awesome-reveal";
 
 interface dropdownProps{
     title: string,
@@ -50,6 +51,7 @@ export function Dropdown({title,items}:dropdownProps) {
     <Container ref={wrapperRef}>
         <button onClick={ () => Buttonhandler()}>{title} <FiChevronDown id="downarrow"/></button>
         {open && 
+        <Slide cascade duration={300} direction='up'>
             <ul className='list'>
                 {items.map(item => {
                     return(
@@ -57,6 +59,7 @@ export function Dropdown({title,items}:dropdownProps) {
                     )
                 })}
             </ul>
+         </Slide>
         }
     </Container>
   );

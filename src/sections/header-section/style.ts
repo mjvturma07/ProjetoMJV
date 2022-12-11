@@ -5,10 +5,8 @@ export const Header = styled.header`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
     width: 100vw;
     height: 9rem;
-
     color: var(--color-text);
     position: relative;
     z-index: 120;
@@ -18,7 +16,6 @@ export const Header = styled.header`
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
         a{
             text-decoration: none;
             color: var(--color-text);

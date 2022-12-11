@@ -8,6 +8,12 @@ export const Container = styled.div`
     height: 100%;
     position: relative;
     z-index: 1000;
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
     .list{
         position: absolute;
         z-index: 1000;
@@ -20,6 +26,9 @@ export const Container = styled.div`
         flex-direction: column;
         border-bottom: 1px solid grey;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        animation: fadeIn .5s; 
+        border-radius: 2px;
+
     }
     a{
         display: flex;
@@ -42,6 +51,4 @@ export const Container = styled.div`
         margin-bottom: -.4rem;
         font-size: 2rem;
     }
-    position: relative;
-    z-index: 1000;
 `
