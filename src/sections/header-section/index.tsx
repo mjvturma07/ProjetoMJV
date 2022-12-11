@@ -3,8 +3,12 @@ import { Header } from "./style";
 import { Link } from "react-router-dom";
 import { Slide } from "react-awesome-reveal";
 import { Dropdown } from "../../components/dropdown";
+import { FiAlignJustify,FiX } from "react-icons/fi";
+import {useState} from "react"
 
 export default function Header_section(){
+    const[isOpenMenuMobile, setIsOpenMenuMobile] = useState("")
+
     const itemCategorias = [
         {
             name: "Clothes",
@@ -30,14 +34,31 @@ export default function Header_section(){
     return(
         <Header>
             <nav>
-                <Link to='/'>
-                    <img loading="lazy" width={"200px"} height={"60px"} src="/logo-with-text.svg" alt="logo shop" />
+                <Link to='/' id="logoLink">
+                    <img className="logo" loading="lazy" width={"200px"} height={"60px"} src="/logo-with-text.svg" alt="logo shop" />
                 </Link>
 
-                <Slide cascade duration={500} direction={"right"}>
+                <Slide className={`links ${isOpenMenuMobile}`} cascade duration={500} direction={"right"}>
+        
                     <ul>
+                        {isOpenMenuMobile === "aparecer" ? 
+
+                        <li id="menuMob">
+                            <div className="row">
+                                <Link to='/'>
+                                    <img id="logo2" className="logo" loading="lazy" width={"200px"} height={"60px"} src="/logo-with-text.svg" alt="logo shop" />
+                                </Link>
+                                <FiX onClick={()=>{setIsOpenMenuMobile("")}} id="closeModal"/>
+                            </div>
+                            <Dropdown title="Categorias" items={itemCategorias}/>
+                        </li> 
+                        
+                        : ''
+
+                        }
+
                         <li>
-                            <Link to='/'>
+                            <Link to='/' onClick={()=>{setIsOpenMenuMobile("")}}>
                                 Início
                             </Link>
                         </li>
@@ -46,14 +67,16 @@ export default function Header_section(){
                             <a href="https://wa.me/31991049113" target={"_blank"}><button>Contato</button></a>
                         </li>
 
-                        <li>
+                        {isOpenMenuMobile === "" ? <li>
                             <Dropdown title="Categorias" items={itemCategorias}/>
-                        </li>
+                        </li> : ""}
+                        
                     </ul>
                 </Slide>
             </nav>
 
             <Login/>
+            <button id="mobileMenu" onClick={()=>{setIsOpenMenuMobile("aparecer")}}><FiAlignJustify id="mobileMenuIcon"/></button>
         </Header>
     )
 }

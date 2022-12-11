@@ -1,4 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { flash } from 'react-animations';
+
+const rotate = keyframes`${flash}`;
 
 export const Main = styled.main`
     display: flex;
@@ -27,6 +30,8 @@ export const Main = styled.main`
             font-size: 4rem;
             line-height: 62px;
             letter-spacing: 0.125px;
+            animation: 1s ${rotate};
+            animation-delay:1s;
         }
         p{
             font-style: normal;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     position: fixed;
-    z-index: 2000;
+    z-index: 20;
     bottom: 5%;
     right: 5%;
 
@@ -13,6 +13,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 1px 1px grey;
     :hover{
         transform: scale(1.05);
     }
