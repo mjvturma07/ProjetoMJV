@@ -107,7 +107,7 @@ export default function Login(){
     
     return(
         <Container>
-            <Slide cascade direction="up" triggerOnce duration={400}>
+            <Slide direction="up" triggerOnce duration={400}>
                 {userData?.name === "Admin" ? <Link to={`/admin`}>Acessar Painel</Link> : ''}
                 {userData?.name != undefined ? <p>Bem-vindo(a), {userData.name}.</p>: ''}
             </Slide>
@@ -122,7 +122,7 @@ export default function Login(){
                     <fieldset>
                         <legend> Entrar <span className="tracovermelho"></span> </legend>
                             <Input
-                                id='email'
+                                id='emails'
                                 name='email'
                                 label='Insira seu e-mail'
                                 type='email'

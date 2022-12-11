@@ -13,6 +13,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 1px 1px grey;
     :hover{
         transform: scale(1.05);
     }
