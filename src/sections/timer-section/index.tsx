@@ -45,24 +45,23 @@ export default function Timer_section(){
 
         <SearchContainer>
 
-                    <img id="papai" src="/papai-noel.webp" alt="papai noel" />
+            <img loading="eager" id="papai" src="/papai-noel.webp" alt="papai noel" />
 
-                    <main>
+            <main>
 
-                        <h2>Natal está chegando!</h2>
-                        <h3>Ofertas especiais em:</h3>
+                <h2>Natal está chegando!</h2>
+                <h3>Ofertas especiais em:</h3>
 
-                        <section>
-                            <p><span className='number'>{days}</span> Dias</p>
-                            
-                            <p><span className='number'>{hours}</span> Horas</p>
-                            <p><span className='number'>{minutes}</span> Minutos</p>
-                            
-                            <p><span className='number'>{seconds}</span> Segundos</p>
-                        </section>
-                    </main>
-
+                <section>
+                    <p><span className='number'>{days}</span> Dias</p>
                     
+                    <p><span className='number'>{hours}</span> Horas</p>
+                    <p><span className='number'>{minutes}</span> Minutos</p>
+                    
+                    <p><span className='number'>{seconds}</span> Segundos</p>
+                </section>
+            </main>
+
         </SearchContainer>
     )
 }

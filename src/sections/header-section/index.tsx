@@ -48,7 +48,7 @@ export default function Header_section(){
                                 <Link to='/'>
                                     <img id="logo2" className="logo" loading="lazy" width={"200px"} height={"60px"} src="/logo-with-text.svg" alt="logo shop" />
                                 </Link>
-                                <FiX onClick={()=>{setIsOpenMenuMobile("")}} id="closeModal"/>
+                                <FiX aria-label="open menu button" onClick={()=>{setIsOpenMenuMobile("")}} id="closeModal"/>
                             </div>
                             <Dropdown title="Categorias" items={itemCategorias}/>
                         </li> 
@@ -64,7 +64,7 @@ export default function Header_section(){
                         </li>
 
                         <li>
-                            <a href="https://wa.me/31991049113" target={"_blank"}><button>Contato</button></a>
+                            <a href="https://github.com/mjvturma07" target={"_blank"}><button>Contato</button></a>
                         </li>
 
                         {isOpenMenuMobile === "" ? <li>

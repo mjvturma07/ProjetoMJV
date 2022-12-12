@@ -9,8 +9,21 @@ import Header_section from "../../sections/header-section"
 import Category_section from "../../sections/category-section"
 import Footer_section from "../../sections/footer-section";
 import Back_to_top from "../../components/back-to-top";
+import { useEffect, useState } from "react";
 
 export default function Home(){
+
+    const[scrolled, setScrolled] = useState(false)
+
+    useEffect(()=>{
+        window.onscroll = function () {  
+            setScrolled(true)
+        } 
+        if(window.innerWidth > 1000){
+            setScrolled(true)
+        }
+    },[])
+
 
     return(
         <Container> 
@@ -21,7 +34,6 @@ export default function Home(){
             </Fade>
 
             <Market>
-                    {/* <LogoCube/> */}
                 <Fade direction={'down'} className="timerdiv">
                     <Timer_section/>
                 </Fade>
@@ -30,14 +42,19 @@ export default function Home(){
                     <Benefits_section/>
                 </Fade>
 
-
-                <Destaque_section/>
-                <Category_section title="Categorias"/>
-                <Novidade_section/>
+                { scrolled && <>
+                    <Destaque_section/>
+                    <Category_section title="Categorias"/>
+                    <Novidade_section/>
+                </>}
             </Market>
 
-            <Back_to_top/>
-            <Footer_section/>
+            { scrolled && 
+            <>
+                <Back_to_top/>
+                <Footer_section/>
+            </>}
+
         </Container>
     )
 } 
