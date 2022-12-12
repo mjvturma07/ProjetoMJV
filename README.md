@@ -3,9 +3,9 @@
 Professor: Tsunoda
 
 Grupo :
-    Hani Afif Yehia
-    Bev Feitosa
-    Carlos Eduardo Perdomo Vargas
+    Hani Afif Yehia <br/>
+    Bev Feitosa <br/>
+    Carlos Eduardo Perdomo Vargas <br/>
     Archimedes dos Santos Rocha
 
 Para rodar a aplicação voce precisa:
@@ -54,17 +54,17 @@ https://formidable.com/open-source/victory/docs/ victory
 
 Orientação para criação de nova página:
 
-1. Criei um arquivo tsx na pasta "pages" e exporte a função componente que será sua página.
-2. Importe e adicione a rota na pasta routes seguindo os exemplos já feitos.
-3. Reutilize componentes que iram repetir na página (header,footer etc)
-4. Oque precisar adicionar na nova página crie um componente "section" e deixe documentado para próximas utilizações
+1. Criei um arquivo tsx na pasta "pages" e exporte a função componente que será sua página. <br/>
+2. Importe e adicione a rota na pasta routes seguindo os exemplos já feitos. <br/>
+3. Reutilize componentes que iram repetir na página (header,footer etc) <br/>
+4. Oque precisar adicionar na nova página crie um componente "section" e deixe documentado para próximas utilizações <br/>
 5. Adicione componentes menores na pasta "componente"
 
 Oque não foi feito e poderia ser uma melhoria:
 
-1.Separar todos os useEffects e tipagem em custom hooks.
-2.Trocar fecth para Axios.
-3.Testes unitários.
+1.Separar todos os useEffects e tipagem em custom hooks. <br/>
+2.Trocar fecth para Axios. <br/> 
+3.Testes unitários. <br/>
 4.Design system.
 
 
