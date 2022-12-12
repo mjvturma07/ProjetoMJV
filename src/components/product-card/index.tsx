@@ -17,10 +17,14 @@ export default function ProductCard({image, title, category, price,description,i
 
     return(
         <Link style={{textDecoration: "none"}} to={`/produto/${id}`}>
-            <Container onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}>
+
+            <Container 
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+            >
             
                 <img loading="lazy" src={image}alt={title} />
+                
                 <section className="text">
                     <h2 className="category">{category}</h2>
                     <h3 className="title">{title}</h3>

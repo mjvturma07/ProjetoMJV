@@ -9,7 +9,7 @@ interface categoryCardProps{
     navigateLink: number,
 }
 
-export default function Category_card({categoryTitle,productQuantity,imgLink,navigateLink}:categoryCardProps){
+export default function Category_card({categoryTitle,imgLink,navigateLink}:categoryCardProps){
 
     return(
         <Slide>

@@ -16,9 +16,8 @@ export default function SellHistoryCard({productName,productPrice,productSellDat
                 <li> <span>{productSellDate}</span></li>
             </ul>
 
-            <FiShoppingCart className="shoppingtag" color="green"/>
-            <FiCalendar className="calendartag"/>
-            
+            <FiShoppingCart aria-label="shopping tag" className="shoppingtag" color="green"/>
+            <FiCalendar aria-label="calendar tag" className="calendartag"/>
         </Container>
     )
 }
