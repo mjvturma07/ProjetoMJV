@@ -25,13 +25,12 @@ export default function Category_section({title}:categorySection){
 
         })();
     },[])
+
     return(
         <Container>
-                <div className="flexrow">
-                    <h2>{title}</h2>
-                </div>
-            <section className="productheader">
-            </section>
+            <div className="flexrow">
+                <h2>{title}</h2>
+            </div>
 
             <section className="categoryDiv">
             

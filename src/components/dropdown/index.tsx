@@ -14,6 +14,7 @@ interface dropdownProps{
 }
 
 export function Dropdown({title,items}:dropdownProps) {
+
     const [open, setOpen] = useState(false)
     const wrapperRef = useRef(null);
     useOutsideAlerter(wrapperRef);
@@ -21,45 +22,60 @@ export function Dropdown({title,items}:dropdownProps) {
     function Buttonhandler(){
         if(open){
             setOpen(false)
-        }else {setOpen(true)}
+        } else {
+            setOpen(true)
+        }
     }
+
     function closeMenu(){
         setOpen(false)
     }
 
     function useOutsideAlerter(ref:MutableRefObject<any>) {
         useEffect(() => {
-          /**
-           * Alert if clicked on outside of element
-           */
-          function handleClickOutside(event:Event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setOpen(false);
-            }
-          }
-          // Bind the event listener
-          document.addEventListener("mousedown", handleClickOutside);
-          return () => {
+          
+            //Check if clicked on outside of element
+            
+            function handleClickOutside(event:Event) {
+                    if (ref.current && !ref.current.contains(event.target)) {
+                        setOpen(false);
+                    }
+                }
+
+            // Bind the event listener
+
+            document.addEventListener("mousedown", handleClickOutside);
+
+            return () => {
             // Unbind the event listener on clean up
             document.removeEventListener("mousedown", handleClickOutside);
-          };
+            };
+
         }, [ref]);
-      }
+    }
     
 
   return (
     <Container ref={wrapperRef}>
-        <button onClick={ () => Buttonhandler()}>{title} <FiChevronDown id="downarrow"/></button>
+
+        <button onClick={ () => Buttonhandler()}>
+            {title} 
+            <FiChevronDown id="downarrow"/>
+        </button>
+
         {open && 
-        <Slide cascade duration={300} direction='up'>
-            <ul className='list'>
-                {items.map(item => {
-                    return(
-                        <Link onClick={closeMenu} to={item.path}>{item.name}</Link>
-                    )
-                })}
-            </ul>
-         </Slide>
+
+            <Slide cascade duration={300} direction='up'>
+                <ul className='list'>
+                    
+                    {items.map(item => {
+                        return(
+                            <Link onClick={closeMenu} to={item.path}>{item.name}</Link>
+                        )
+                    })}
+
+                </ul>
+            </Slide>
         }
     </Container>
   );

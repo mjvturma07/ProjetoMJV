@@ -8,7 +8,6 @@ import Destaque_section from "../../sections/destaque-section"
 
 export default function ProductPage(){
     const [singleProductData, setSingleProductData] = useState<productProps>()
-
     const {produtoId} =  useParams(); // Get param of URL to dinamicly to render page
 
     useEffect(() => {
@@ -32,7 +31,7 @@ export default function ProductPage(){
     return(
         <>
             <Header_section/>
-            
+
             <Container>
                 <Main>
                     <div className="row"> 

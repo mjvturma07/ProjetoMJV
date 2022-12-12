@@ -1,7 +1,12 @@
 # Projeto MJV SCHOOL REACT professor Tsunoda
 
-Projeto do time 07 para a SCHOOL DE REACT DA MJV 
 Professor: Tsunoda
+
+Grupo :
+    Hani Afif Yehia
+    Bev Feitosa
+    Carlos Eduardo Perdomo Vargas
+    Archimedes dos Santos Rocha
 
 Para rodar a aplicação voce precisa:
 
@@ -47,4 +52,19 @@ https://react-icons.github.io/react-icons/ react-icons <br/>
 https://styled-components.com/docs styled-components <br/>
 https://formidable.com/open-source/victory/docs/ victory
 
-Obs: Por causa de questões de tempo de entrega do projeto, a responsividade para tablets e para mobile não foi levada em consideração, sendo colocada como um possível feature e melhoria futura.
+Orientação para criação de nova página:
+
+1. Criei um arquivo tsx na pasta "pages" e exporte a função componente que será sua página.
+2. Importe e adicione a rota na pasta routes seguindo os exemplos já feitos.
+3. Reutilize componentes que iram repetir na página (header,footer etc)
+4. Oque precisar adicionar na nova página crie um componente "section" e deixe documentado para próximas utilizações
+5. Adicione componentes menores na pasta "componente"
+
+Oque não foi feito e poderia ser uma melhoria:
+
+1.Separar todos os useEffects e tipagem em custom hooks.
+2.Trocar fecth para Axios.
+3.Testes unitários.
+4.Design system.
+
+

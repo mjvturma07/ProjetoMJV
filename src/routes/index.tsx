@@ -11,7 +11,6 @@ export default function RoutesMain(){
                 <Route path="/categorias/:categoryId" element={<CategoryPage/>} />
                 <Route path="/produto/:produtoId" element={<ProductPage/>} />
                 <Route path="/admin" element={<AdminPage/>} />
-                {/* <Route path="*" element={<CategoryPage/>} /> */}
         </Routes>
     )
 }

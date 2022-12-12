@@ -40,18 +40,25 @@ export default function Home(){
                     <Benefits_section/>
                 </Fade>
 
-                { loaded && <>
+                { loaded && 
+
+                <>
                     <Destaque_section/>
                     <Category_section title="Categorias"/>
                     <Novidade_section/>
-                </>}
+                </>
+                
+                }
             </Market>
 
             { loaded && 
-            <>
-                <Back_to_top/>
-                <Footer_section/>
-            </>}
+
+                <>
+                    <Back_to_top/>
+                    <Footer_section/>
+                </>
+
+            }
 
         </Container>
     )

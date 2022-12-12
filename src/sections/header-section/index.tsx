@@ -64,7 +64,7 @@ export default function Header_section(){
                         </li>
 
                         <li>
-                            <a href="https://github.com/mjvturma07" target={"_blank"}><button>Contato</button></a>
+                            <a href="https://github.com/mjvturma07/ProjetoMJV" target={"_blank"}><button>Contato</button></a>
                         </li>
 
                         {isOpenMenuMobile === "" ? <li>

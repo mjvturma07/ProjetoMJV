@@ -15,11 +15,11 @@ export default function Footer_section(){
                 <section className="logoeicons">
                     <img width={300} height={90} loading="lazy" className="logoFooter" src="/logo_footer.svg" alt="logo aquiexpress" />
                     <div className="socialicons">
-                        <FiFacebook/>
-                        <FiTwitter/>
-                        <FiInstagram/>
-                        <FiYoutube/>
-                        <FiGithub/>
+                        <FiFacebook aria-label="Facebook logo"/>
+                        <FiTwitter aria-label="Twitter logo"/>
+                        <FiInstagram aria-label="Instagram logo"/>
+                        <FiYoutube aria-label="Youtube logo"/>
+                        <FiGithub aria-label="Github logo"/>
                     </div>
                 </section>
 

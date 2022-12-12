@@ -1,6 +1,5 @@
 import Input from "../input";
 import { Container } from "./style";
-
 import  { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -18,7 +17,6 @@ export default function Login(){
     const [loginSuces , setloginSucess] = useState(false)
     const [closed, setClosed] = useState("LoginScreenClosed")
     const [authToken, setAuthToken] = useState('')
-
     const [userData, setUserData] = useState<userData>()
 
     async function tryLogin(event:any){
@@ -40,17 +38,14 @@ export default function Login(){
             },
             body: JSON.stringify(data)})
             .then(res => { return (
-
                 res.status === 201 ? loginSucess() : setLoginFailed(true),
                 res.json()
-
             )
             }).then(res => {
                 sessionStorage.setItem("admintoken", res.access_token);
                 setAuthToken(res.access_token)
             })
         }
-
 
     useEffect(()=>{
 

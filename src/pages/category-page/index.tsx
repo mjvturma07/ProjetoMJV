@@ -13,7 +13,6 @@ export default function CategoryPage(){
     const [singleCategoryData, setSingleCategoryData] = useState<productProps[]>([])
     const [categoryProductsPage, setCategoryProductsPage] = useState(0)
     const [disabled, setDisabled] = useState(false)
-
     const {categoryId} =  useParams(); // Get param of URL to dinamicly to render page
     
     // Some products title are coming in capital letter and some not, this is to padronize
@@ -23,6 +22,7 @@ export default function CategoryPage(){
     }
 
     useEffect(() => {
+
         (async function getSingleCategoryData(){
             await fetch(`https://api.escuelajs.co/api/v1/categories/${categoryId}/products`, 
             {method: 'GET',})
@@ -42,7 +42,6 @@ export default function CategoryPage(){
         if (categoryProductsPage > numberPages -8 ){
             setDisabled(true)
         }
-        
     }
 
     function previousPage(){
@@ -54,35 +53,35 @@ export default function CategoryPage(){
 
     return(
         <>
-        <Header_section/>
-        
-        <Container>
-            <CarouselContainer>
-                <section className="productheader">
-                            <div className="flexrow">
-                                <h2>Produtos da categoria</h2>
+            <Header_section/>
+            
+            <Container>
+                <CarouselContainer>
+                    <section className="productheader">
+                        <div className="flexrow">
+                            <h2>Produtos da categoria</h2>
+                        </div>
+
+                        <div className="flexrow">
+                                <button disabled={categoryProductsPage === 0 ? true : false} className="pageArrow" onClick={ ()=> {
+                                    previousPage()}
+                                }>
+                                {"<"}
+                            </button>
+
+                            <div className="pageNumber">
                             </div>
 
-                            <div className="flexrow">
-                                    <button disabled={categoryProductsPage === 0 ? true : false} className="pageArrow" onClick={ ()=> {
-                                        previousPage()}
-                                    }>
-                                    {"<"}
-                                </button>
-
-                                <div className="pageNumber">
-                                </div>
-
-                                <button disabled={ disabled ? true : false} className="pageArrow" onClick={ ()=>{
-                                nextPage()}
-                                    }
-                                    >
-                                    {">"}
-                                </button>
-                            </div>
-                </section>
-                    
-                <section className="products">
+                            <button disabled={ disabled ? true : false} className="pageArrow" onClick={ ()=>{
+                            nextPage()}
+                                }
+                                >
+                                {">"}
+                            </button>
+                        </div>
+                    </section>
+                        
+                    <section className="products">
                         {   
                             singleCategoryData?.slice(categoryProductsPage,categoryProductsPage +4).map((product) => {
                                 return(
@@ -98,13 +97,13 @@ export default function CategoryPage(){
                                 )
                             })
                         }
-                </section>
+                    </section>
 
-                <Category_section title="Ver outras categorias"/>
-            </CarouselContainer>
-        </Container>
+                    <Category_section title="Ver outras categorias"/>
+                </CarouselContainer>
+            </Container>
 
-        <Footer_section/>
+            <Footer_section/>
         </>
     )
 }
