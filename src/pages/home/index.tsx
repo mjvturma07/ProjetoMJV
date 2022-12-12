@@ -1,15 +1,18 @@
+import React ,{ useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Container, Market } from "./style"
 import Main_section from "../../sections/main-section"
 import Benefits_section from "../../sections/benefits-section"
-import Destaque_section from "../../sections/destaque-section"
-import Novidade_section from "../../sections/novidade-section"
 import Timer_section from "../../sections/timer-section"
 import Header_section from "../../sections/header-section"
-import Category_section from "../../sections/category-section"
-import Footer_section from "../../sections/footer-section";
-import Back_to_top from "../../components/back-to-top";
-import { useEffect, useState } from "react";
+
+const Destaque_section = React.lazy(() => import('../../sections/benefits-section'));
+const Novidade_section = React.lazy(() => import('../../sections/novidade-section'));
+const Category_section = React.lazy(() => import('../../sections/category-section'));
+const Footer_section = React.lazy(() => import('../../sections/footer-section'));
+const Back_to_top = React.lazy(() => import('../../components/back-to-top'));
+
+// LAZY IMPORT COMPONENTS THAT DO NOT RENDER ON INITIAL RENDER
 
 export default function Home(){
 
