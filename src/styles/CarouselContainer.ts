@@ -52,4 +52,11 @@ export const CarouselContainer = styled.section`
 
         margin-top: 2rem;
     }
+
+    @media screen and (max-width: 1024px) {
+        .products {
+            gap: 3rem;
+            justify-content: space-around;
+        }
+    }
 `
