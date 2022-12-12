@@ -38,7 +38,7 @@ export default function Header_section(){
                     <img className="logo" loading="lazy" width={"200px"} height={"60px"} src="/logo-with-text.svg" alt="logo shop" />
                 </Link>
 
-                <Slide className={`links ${isOpenMenuMobile}`} cascade duration={500} direction={"right"}>
+                <Slide className={`links ${isOpenMenuMobile}`} cascade duration={500} direction={"right"} triggerOnce>
         
                     <ul>
                         {isOpenMenuMobile === "aparecer" ? 
