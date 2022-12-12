@@ -38,15 +38,13 @@ export const Container = styled.div`
   img{
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-
-    height: 18.25rem;
+    height: 20.85rem;
     width: 100%;
   }
 
   .category{
     font-size: 1.2rem;
     color: #959EAD;
-
     margin-top: .7rem;
     margin-bottom: .5rem;
   }
@@ -55,7 +53,6 @@ export const Container = styled.div`
     font-size: 1.5rem;
     color: #1B1D21;
     line-height: 1.7rem;
-
     margin-bottom: 1.5rem;
   }
   

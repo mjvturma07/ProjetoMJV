@@ -7,7 +7,7 @@ export default function ActiveCampaignForm() {
     useEffect(()=>{
         script.src = 'https://haniaboultaif.activehosted.com/f/embed.php?id=1';
         script.async = true;
-        document.body.appendChild(script);
+        document.body.appendChild(script)
     },[])
 
     return(
