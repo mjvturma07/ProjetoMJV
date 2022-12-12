@@ -33,37 +33,20 @@ export default function Category_section({title}:categorySection){
                 </div>
             </section>
 
-            <div className="categoryDivCol">
-                <section className="categoryDivRow">
-                
-                    {categoriesData?.slice(0,3).map(category => {
-                        return (
-                            <Category_card
-                            key={category.id}
-                            navigateLink={category.id}
-                            categoryTitle={category.name}
-                            imgLink={category.image}
-                            />
-                        )
-                    })}
+            <section className="categoryDiv">
+            
+                {categoriesData?.slice(0,5).map(category => {
+                    return (
+                        <Category_card
+                        key={category.id}
+                        navigateLink={category.id}
+                        categoryTitle={category.name}
+                        imgLink={category.image}
+                        />
+                    )
+                })}
 
-                </section>
-
-                <section className="categoryDivRow">
-
-                    {categoriesData?.slice(3,5).map(category => {
-                        return (
-                            <Category_card
-                            key={category.id}
-                            navigateLink={category.id}
-                            categoryTitle={category.name}
-                            imgLink={category.image}
-                            />
-                        )
-                    })}
-
-                </section>
-            </div>
+            </section>
         </Container>
     )
 }

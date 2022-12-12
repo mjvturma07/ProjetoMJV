@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { Container , Main } from "./styles"
+import { Container  } from "./styles"
 import Category_section from "../../sections/category-section"
 import Header_section from "../../sections/header-section"
 import productProps from "../../utility/productDTO"
 import ProductCard from "../../components/product-card"
 import Footer_section from "../../sections/footer-section"
+import { CarouselContainer } from "../../styles/CarouselContainer"
 
 export default function CategoryPage(){
 
@@ -56,50 +57,53 @@ export default function CategoryPage(){
         <Header_section/>
         
         <Container>
-            <Main>
+            <CarouselContainer>
+                <section className="productheader">
+                            <div className="flexrow">
+                                <h2>Produtos da categoria</h2>
+                            </div>
 
-            <section className="productheader">
-                        <div className="flexrow">
-                            <h2>Produtos da categoria</h2>
-                        </div>
+                            <div className="flexrow">
+                                    <button disabled={categoryProductsPage === 0 ? true : false} className="pageArrow" onClick={ ()=> {
+                                        previousPage()}
+                                    }>
+                                    {"<"}
+                                </button>
 
-                        <div className="flexrow">
-                                <button disabled={categoryProductsPage === 0 ? true : false} className="pageArrow" onClick={ ()=> {
-                                    previousPage()}
-                                }>
-                                {"<"}
-                            </button>
-                            <button disabled={ disabled ? true : false} className="pageArrow" onClick={ ()=>{
-                               nextPage()}
-                                }
-                                 >
-                                {">"}
-                            </button>
-                        </div>
-            </section>
-                
-            <section className="products">
-                    {   
-                        singleCategoryData?.slice(categoryProductsPage,categoryProductsPage +4).map((product) => {
-                            return(
-                            <ProductCard
-                            category={product.category.name}
-                            image={product.images[0]}
-                            price={product.price}
-                            title={capitalizeFirstLetter(product.title)}
-                            key={product.id}
-                            id={product.id}
-                            description={product.description}
-                            />
-                            )
-                        })
-                    }
-            </section>
+                                <div className="pageNumber">
+                                </div>
 
-            <Category_section title="Ver outras categorias"/>
+                                <button disabled={ disabled ? true : false} className="pageArrow" onClick={ ()=>{
+                                nextPage()}
+                                    }
+                                    >
+                                    {">"}
+                                </button>
+                            </div>
+                </section>
+                    
+                <section className="products">
+                        {   
+                            singleCategoryData?.slice(categoryProductsPage,categoryProductsPage +4).map((product) => {
+                                return(
+                                <ProductCard
+                                category={product.category.name}
+                                image={product.images[0]}
+                                price={product.price}
+                                title={capitalizeFirstLetter(product.title)}
+                                key={product.id}
+                                id={product.id}
+                                description={product.description}
+                                />
+                                )
+                            })
+                        }
+                </section>
 
-            </Main>
+                <Category_section title="Ver outras categorias"/>
+            </CarouselContainer>
         </Container>
+
         <Footer_section/>
         </>
     )

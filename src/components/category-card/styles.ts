@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.section`    
     display: flex;
-    justify-content: row;
-    position: relative;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 15px;
+    
     padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--color-warning);
+
     background-color: #2E2E2E06;
 
     :hover{
@@ -18,21 +20,28 @@ export const Container = styled.section`
 
     img{
         border-radius: 10px;
-        margin-right:2rem;
-        margin-left:15rem;
     }
 
-    margin-right:4rem;
+    header  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-    header h2{
-        font-size: 2rem;
-        position: absolute;
-        font-weight: 400;
+        width: 120px;
+
+        h2{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    
+        h3{
+            bottom: 14%;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
     }
-    h3{
-        position: absolute;
-        bottom: 14%;
-        font-weight: 600;
-        color: var(--color-primary);
+
+    @media screen and (max-width: 425px) {
+        width: 80vw;
     }
 `

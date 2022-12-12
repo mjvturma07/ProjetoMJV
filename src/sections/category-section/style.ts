@@ -3,16 +3,21 @@ import styled from "styled-components"
 export const Container = styled.section`
     display: flex;
     flex-direction: column;
+    row-gap: 4rem;
+
     width: 100%;
+
+    /* Trocar esse margin por row-gap no container maior */
     margin-top: 4rem;
 
-    margin-top: 3rem;
     .productheader{
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
     }
+
+    /* Onde esse buton tá indo? */
     button{
             color: var(--color-primary);
             margin-left: 1.5rem;
@@ -25,13 +30,19 @@ export const Container = styled.section`
         letter-spacing: 0.14px;
     }
 
-    .categoryDivCol{
-        display: flex;
-        flex-direction: column;
-    }
-    .categoryDivRow{
+    .categoryDiv{
         display: flex;
         flex-direction: row;
-        margin-top: 4rem;
+        flex-wrap: wrap;
+
+        gap: 4rem;
+    }
+
+    @media screen and (max-width: 425px) {
+        .categoryDiv {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
     }
 `

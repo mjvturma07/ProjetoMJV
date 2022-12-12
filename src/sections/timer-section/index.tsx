@@ -45,7 +45,7 @@ export default function Timer_section(){
 
         <SearchContainer>
 
-                    <img id="papai" width='400px' height='261px' src="/papai-noel.webp" alt="papai noel" />
+                    <img id="papai" src="/papai-noel.webp" alt="papai noel" />
 
                     <main>
 

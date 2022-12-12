@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NovidadeContainer = styled.section`
+export const CarouselContainer = styled.section`
     display: flex;
     flex-direction: column;
 
@@ -13,17 +13,6 @@ export const NovidadeContainer = styled.section`
         font-size: 25px;
         line-height: 38px;
         letter-spacing: 0.14px;
-    }
-    
-    .products{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        gap: 3rem;
-
-        margin-top: 2rem;
     }
 
     .productheader{
@@ -49,6 +38,25 @@ export const NovidadeContainer = styled.section`
             padding: 1rem 1.5rem;
             border-radius: 50%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+
+        
+    .products{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        gap: 5rem;
+
+        margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .products {
+            gap: 3rem;
+            justify-content: space-around;
         }
     }
 `

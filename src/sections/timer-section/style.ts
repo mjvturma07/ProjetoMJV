@@ -2,11 +2,19 @@ import styled from "styled-components";
 
 export const SearchContainer = styled.section`
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: row;
         align-items: center;
+
         width: 100%;
+        
+        /* Apagar e trocar por row-gap no container maior */
         margin-bottom: 5rem;
+        
+        #papai{
+                filter: drop-shadow(5px 5px 5px);
+                width: 320px;
+        }
 
         main{
                 display: flex;
@@ -16,8 +24,9 @@ export const SearchContainer = styled.section`
                 flex-direction: column;
                 gap: 1.4rem;
 
-                margin-right: 7rem;
-                margin-left:25rem;
+                /* margin-right: 7rem;
+                margin-left: 10rem; */
+
                 h2{
                         color: var(--color-primary);
                         font-weight: bold;
@@ -43,18 +52,35 @@ export const SearchContainer = styled.section`
                         text-align:center;
                         margin-right: .5rem;
                 }
+
+                section{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        flex-direction: row;
+                        gap: 1.4rem;  
+                }
         }
 
-        #papai{
-                filter: drop-shadow(5px 5px 5px);
+        @media screen and (max-width: 1100px) {
+                flex-direction: column;
+
+                #papai {
+                        margin-bottom: 5rem;
+                }
         }
 
-        section{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        @media screen and (max-width: 765px) {
+                main {
+                        h2 {
+                                font-size: 2.8rem;
+                        }
 
-                flex-direction: row;
-                gap: 1.4rem;  
+                        section {
+                                flex-direction: column;
+                        }
+                }
+
         }
 `

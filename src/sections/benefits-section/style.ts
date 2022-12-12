@@ -12,6 +12,7 @@ export const BenefitsContainer = styled.section`
                 flex-direction: row;
 
                 width: 100%;
+
                 h3{
                     font-size: 1.8rem;
                     font-weight: 600;
@@ -23,6 +24,7 @@ export const BenefitsContainer = styled.section`
                     margin-left: 2rem;
                 }
             }
+
             img{
                 padding: 1rem;
                 border-radius: 50%;
@@ -32,10 +34,26 @@ export const BenefitsContainer = styled.section`
                 height: 5rem;
                 width: 5rem;
             }
+
+            /* Onde esse estilo tá indo? */
             button{
                 font-weight: 600;
                 
                 margin-top: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            align-self: center;
+
+            h2 {
+                text-align: center;
+            }
+
+            ul {
+                align-items: center;
+                flex-direction: column;
+                row-gap: 1rem;
             }
         }
 `

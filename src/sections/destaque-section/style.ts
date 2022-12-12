@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const DestaqueContainer = styled.section`
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
 
-        h2{
+    width: 100%;
+    
+    margin-top: 4rem;
+
+    h2{
         font-weight: 600;
         font-size: 25px;
         line-height: 38px;
@@ -14,12 +16,14 @@ export const DestaqueContainer = styled.section`
     }
     
     .products{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            gap: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
 
-            margin-top: 2rem;
+        gap: 3rem;
+
+        margin-top: 2rem;
     }
 
     .productheader{
@@ -28,9 +32,16 @@ export const DestaqueContainer = styled.section`
         align-items: center;
         flex-direction: row;
 
+        .pageNumber {
+            width: 30px;
+
+            h3 {
+                text-align: center;
+            }
+        }
+
         button{
             color: var(--color-primary);
-            margin-left: 1.5rem;
         }
 
         .pageArrow{
