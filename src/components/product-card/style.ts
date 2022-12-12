@@ -11,11 +11,10 @@ export const Container = styled.div`
   width: 30rem;
 
   border-radius: 8px;
-  border: 1px solid var(--color-warning);
-
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
   background-color: #2E2E2E06;
   padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   transition: .4s ease-out;
   animation: .5s  ${toRight};

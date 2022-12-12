@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const Container = styled.section`
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    row-gap: 4rem;
+
     h1{
         text-align: center;
     }
@@ -11,26 +14,29 @@ export const Container = styled.section`
 
 export const Main = styled.div`
     display: flex;
-    align-items: flex-start;
-    flex-direction: row;
     justify-content: space-around;
-    padding: 4rem 5rem;
+    align-items: center;
+    row-gap: 4rem;
+
+    width: 90vw;
+    max-width: 1600px;
 
     #chartdiv{
-        height:35rem;
-        width: 47rem;
-        margin-left:-10rem;
         h2{
             text-align: center;
         }
+
+        section{
+            height: 35rem;
+            width: 47rem;
+        }
     }
 
-    width: 100%;
-    height: 45rem;
-
-    .divrow{
+    .salesAmount{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-top: 4rem;
         margin-left: 1rem;
         width: 100%;
@@ -43,4 +49,16 @@ export const Main = styled.div`
         }
     }
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 425px) {
+        #chartdiv {
+            section {
+                height: 29rem;
+                width: 40rem;
+            }
+        }
+    }
 `

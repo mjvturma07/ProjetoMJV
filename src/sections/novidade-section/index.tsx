@@ -1,7 +1,8 @@
-import { NovidadeContainer } from "./style";
+// import { NovidadeContainer } from "./style";
 import productProps from "../../utility/productDTO";
 import {useState, useEffect} from "react"
 import ProductCard from "../../components/product-card";
+import { CarouselContainer } from "../../styles/CarouselContainer";
 
 export default function Novidade_section(){
 
@@ -30,7 +31,7 @@ export default function Novidade_section(){
 
 
     return(
-        <NovidadeContainer>
+        <CarouselContainer>
             <section className="productheader">
 
                 <div className="flexrow">
@@ -39,11 +40,13 @@ export default function Novidade_section(){
 
                 <div className="flexrow">
 
-                    <h3>Pagina: {pageNovidades +1}</h3>
-
                     <button className="pageArrow" onClick={ ()=> pageNovidades != 0 ? setPageNovidades(pageNovidades -1) : ''}>
                         {"<"}
                     </button>
+
+                    <div className="pageNumber">
+                        <h3>{pageNovidades +1}</h3>
+                    </div>
 
                     <button className="pageArrow" onClick={ ()=> setPageNovidades(pageNovidades + 1)}>
                         {">"}
@@ -55,7 +58,7 @@ export default function Novidade_section(){
                     
             <section className="products">
                 {
-                    novidadeProductsData?.slice(0,4).map((product) => {
+                    novidadeProductsData?.slice(0,8).map((product) => {
                         return(
                             <ProductCard
                             category={product.category.name}
@@ -70,24 +73,6 @@ export default function Novidade_section(){
                     })
                 }
             </section>
-
-            <section className="products">
-                {
-                    novidadeProductsData?.slice(4,8).map((product) => {
-                        return(
-                            <ProductCard
-                            category={product.category.name}
-                            image={product.images[0]}
-                            price={product.price}
-                            title={capitalizeFirstLetter(product.title)}
-                            key={product.id}
-                            id={product.id}
-                            description={product.description}
-                            />
-                            )
-                        })
-                }
-            </section>
-        </NovidadeContainer>
+        </CarouselContainer>
     )
 }

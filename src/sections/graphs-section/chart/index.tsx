@@ -1,4 +1,5 @@
 import { VictoryBar,VictoryChart,VictoryAxis,VictoryTheme,VictoryStack,VictoryLegend,VictoryTooltip } from 'victory';
+import { Container } from './style';
 
 export default function ChartSellByCategory(){
 
@@ -50,7 +51,7 @@ export default function ChartSellByCategory(){
         }
 
     return(
-    <>  
+    <Container>
         
         <VictoryChart theme={VictoryTheme.material} domainPadding={20}>
 
@@ -123,6 +124,6 @@ export default function ChartSellByCategory(){
                 
             </VictoryStack>
         </VictoryChart>
-    </>
+    </ Container>
     )
 }

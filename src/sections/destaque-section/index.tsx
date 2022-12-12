@@ -1,7 +1,8 @@
-import { DestaqueContainer } from "./style";
+// import { DestaqueContainer } from "./style";
 import productProps from "../../utility/productDTO";
 import {useState, useEffect} from "react"
 import ProductCard from "../../components/product-card";
+import { CarouselContainer } from "../../styles/CarouselContainer";
 
 export default function Destaque_section(){
     const [destaqueProductsData, setDestaqueProductsData] = useState<productProps[]>()
@@ -26,20 +27,24 @@ export default function Destaque_section(){
     },[pageDestaques])
 
     return(
-        <DestaqueContainer>
+        <CarouselContainer>
             <section className="productheader">
                 <div className="flexrow">
                     <h2>Destaques da semana</h2>
                 </div>
 
                 <div className="flexrow">
-                    <h3>Pagina: {pageDestaques +1}</h3>
                         <button className="pageArrow" onClick={ ()=> {
                             pageDestaques != 0 ? setPageDestaques(pageDestaques -1) : ''}
                         }
                             >
                         {"<"}
                     </button>
+
+                    <div className="pageNumber">
+                        <h3>{pageDestaques +1}</h3>
+                    </div>
+
                     <button className="pageArrow" onClick={ ()=>{
                             setPageDestaques(pageDestaques + 1)}
                         }
@@ -66,6 +71,6 @@ export default function Destaque_section(){
                     })
                 }
             </section>
-        </DestaqueContainer>
+        </CarouselContainer>
     )
 }

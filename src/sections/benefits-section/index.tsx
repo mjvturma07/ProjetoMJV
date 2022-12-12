@@ -28,7 +28,7 @@ export default function Benefits_section(){
                                 <p>Estamos online 24/7 para te ajudar</p>
                             </div>
                         </li>
-                    </ul>   
+                    </ul>
         </BenefitsContainer>
     )
 }

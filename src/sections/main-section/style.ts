@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     width: 100vw;
@@ -49,5 +49,17 @@ export const Main = styled.main`
         button:active{
             box-shadow: inset 1px 1px 1px var(--color-primary);
         }
+    }
+
+    @media screen and (max-width: 1000px) {
+        justify-content: center;
+
+        #mockup{
+        display: none;
+        }
+    }
+
+    @media screen and (max-width: 475px) {
+        height: 35rem;
     }
 `

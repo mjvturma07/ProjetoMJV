@@ -19,15 +19,13 @@ export default function AdminPage(){
                 <HistorySell/>
             </Main>
 
-            <Main>  
+            <Main>
                 <Pie/>
                 <section id="totalvendas">
                     <h2>Total de vendas</h2>
-                    <div className="divrow">
+                    <div className="salesAmount">
                         <SellHistoryCard productPrice="R$22.350,00" productSellDate="Hoje" key={"day"}/>
                         <SellHistoryCard productPrice="R$133.310,00" productSellDate="Semana" key={"Semana"}/>
-                    </div>
-                    <div className="divrow">
                         <SellHistoryCard productPrice="R$514.610,00" productSellDate="Mês" key={"Mês"}/>
                         <SellHistoryCard productPrice="R$7.883.330,00" productSellDate="Ano" key={"Ano"}/>
                     </div>
