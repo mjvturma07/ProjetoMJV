@@ -6,7 +6,7 @@ import Benefits_section from "../../sections/benefits-section"
 import Timer_section from "../../sections/timer-section"
 import Header_section from "../../sections/header-section"
 
-const Destaque_section = React.lazy(() => import('../../sections/benefits-section'));
+const Destaque_section = React.lazy(() => import('../../sections/destaque-section'));
 const Novidade_section = React.lazy(() => import('../../sections/novidade-section'));
 const Category_section = React.lazy(() => import('../../sections/category-section'));
 const Footer_section = React.lazy(() => import('../../sections/footer-section'));
