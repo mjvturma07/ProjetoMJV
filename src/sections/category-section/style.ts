@@ -25,10 +25,11 @@ export const Container = styled.section`
 
     h2{
         font-weight: 600;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 38px;
         letter-spacing: 0.14px;
     }
+
 
     .categoryDiv{
         display: flex;

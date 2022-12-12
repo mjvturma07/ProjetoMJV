@@ -32,11 +32,11 @@ export default function Home(){
             </Fade>
 
             <Market>
-                <Fade direction={'down'} className="timerdiv">
+                <Fade direction={'down'} className="timerdiv" triggerOnce>
                     <Timer_section/>
                 </Fade>
                     
-                <Fade direction={'down'}>
+                <Fade direction={'down'} triggerOnce>
                     <Benefits_section/>
                 </Fade>
 

@@ -11,7 +11,7 @@ export const Container = styled.div`
   width: 30rem;
 
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   
   background-color: #2E2E2E06;
   padding: 1rem;
@@ -32,7 +32,7 @@ export const Container = styled.div`
   }
 
   :active{
-    box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
 
   img{
@@ -58,6 +58,7 @@ export const Container = styled.div`
   
   h4{
     font-weight: 600;
+    color: #008000;
   }
 
   .text{
@@ -65,7 +66,6 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
     text-align: left;
 
     padding: 1rem;
@@ -73,10 +73,10 @@ export const Container = styled.div`
 
   .comprar{
     margin: 0 auto;
-
+    
     width: 20rem;
     height: 4rem;
-    
+  
     color: var(--color-text-in-primary);
     background-color: var(--color-primary);
 

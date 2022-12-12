@@ -27,10 +27,10 @@ export default function Category_section({title}:categorySection){
     },[])
     return(
         <Container>
-            <section className="productheader">
                 <div className="flexrow">
                     <h2>{title}</h2>
                 </div>
+            <section className="productheader">
             </section>
 
             <section className="categoryDiv">
