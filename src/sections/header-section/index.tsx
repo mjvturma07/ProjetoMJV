@@ -76,7 +76,7 @@ export default function Header_section(){
             </nav>
 
             <Login/>
-            <button id="mobileMenu" onClick={()=>{setIsOpenMenuMobile("aparecer")}}><FiAlignJustify id="mobileMenuIcon"/></button>
+            <button aria-label="open menu button" id="mobileMenu" onClick={()=>{setIsOpenMenuMobile("aparecer")}}><FiAlignJustify aria-label="open menu button" id="mobileMenuIcon"/></button>
         </Header>
     )
 }

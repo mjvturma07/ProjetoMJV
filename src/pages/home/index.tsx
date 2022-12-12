@@ -13,15 +13,10 @@ import { useEffect, useState } from "react";
 
 export default function Home(){
 
-    const[scrolled, setScrolled] = useState(false)
+    const[loaded, setLoaded] = useState(false)
 
     useEffect(()=>{
-        window.onscroll = function () {  
-            setScrolled(true)
-        } 
-        if(window.innerWidth > 1000){
-            setScrolled(true)
-        }
+        setTimeout(()=>{setLoaded(true)},500) // not render all page on first load, because user hasnt reached it yet
     },[])
 
 
@@ -42,14 +37,14 @@ export default function Home(){
                     <Benefits_section/>
                 </Fade>
 
-                { scrolled && <>
+                { loaded && <>
                     <Destaque_section/>
                     <Category_section title="Categorias"/>
                     <Novidade_section/>
                 </>}
             </Market>
 
-            { scrolled && 
+            { loaded && 
             <>
                 <Back_to_top/>
                 <Footer_section/>
