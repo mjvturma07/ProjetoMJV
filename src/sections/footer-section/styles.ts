@@ -29,12 +29,11 @@ export const Container = styled.section`
         align-items: center;
         justify-content: center;
         padding: 2rem 4rem;
+        
         ul{
             flex-direction:column;
-            li{
-                
-            }
         }
+
         .logoeicons{
         display: flex;
         flex-direction: column;

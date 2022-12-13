@@ -166,4 +166,15 @@ export const Container = styled.div`
             height: 10rem;
         }
     }
+
+    @media (max-width: 500px) {
+        #formdiv{
+        width: 90vw;
+
+        transform: translate(50%,-50%);
+        top: 350%;
+        right: 50%;
+        z-index: 100;
+        }
+    }
 `

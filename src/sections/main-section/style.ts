@@ -19,11 +19,6 @@ export const Main = styled.main`
     color: var(--color-text-in-primary);
     overflow: hidden;
 
-    #mockup{
-        height: 56.9rem;
-        width: 54.9rem;
-    }
-
     #maintext{
         h1{
             font-weight: 500;
@@ -33,6 +28,7 @@ export const Main = styled.main`
             animation: 1s ${rotate};
             animation-delay:1s;
         }
+        
         p{
             font-style: normal;
             font-weight: 200;
@@ -54,6 +50,11 @@ export const Main = styled.main`
         button:active{
             box-shadow: inset 1px 1px 1px var(--color-primary);
         }
+    }
+
+    #mockup{
+        height: 56.9rem;
+        width: 54.9rem;
     }
 
     @media screen and (max-width: 1000px) {
