@@ -12,6 +12,7 @@ export const Container = styled.div`
         color: var(--color-success);
         font-weight: bold;
     }
+    
     .bold{
         font-weight: bold;
         color: var(--color-text);

@@ -17,9 +17,11 @@ export const BenefitsContainer = styled.section`
                     font-size: 1.8rem;
                     font-weight: 600;
                 }
+
                 p{
                     font-size: 1.5rem;
                 }
+
                 div{
                     margin-left: 2rem;
                 }
@@ -35,7 +37,6 @@ export const BenefitsContainer = styled.section`
                 width: 5rem;
             }
 
-            /* Onde esse estilo tá indo? */
             button{
                 font-weight: 600;
                 
@@ -46,11 +47,11 @@ export const BenefitsContainer = styled.section`
         @media screen and (max-width: 768px) {
             align-self: center;
 
-            h2 {
+            h2{
                 text-align: center;
             }
 
-            ul {
+            ul{
                 align-items: center;
                 flex-direction: column;
                 row-gap: 1rem;

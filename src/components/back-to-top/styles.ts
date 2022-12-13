@@ -14,9 +14,11 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 1px 1px grey;
+    
     :hover{
         transform: scale(1.05);
     }
+
     .arrow{
         font-size: 2.8rem;
     }

@@ -8,7 +8,6 @@ export const SearchContainer = styled.section`
 
         width: 100%;
         
-        /* Apagar e trocar por row-gap no container maior */
         margin-bottom: 5rem;
         
         #papai{
@@ -23,9 +22,6 @@ export const SearchContainer = styled.section`
 
                 flex-direction: column;
                 gap: 1.4rem;
-
-                /* margin-right: 7rem;
-                margin-left: 10rem; */
 
                 h2{
                         color: var(--color-primary);

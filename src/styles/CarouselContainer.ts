@@ -44,19 +44,40 @@ export const CarouselContainer = styled.section`
         
     .products{
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
 
-        gap: 5rem;
+        column-gap: 5%;
+        row-gap: 5rem;
 
         margin-top: 2rem;
     }
 
-    @media screen and (max-width: 1024px) {
-        .products {
-            gap: 3rem;
-            justify-content: space-around;
+    @media screen and (max-width: 1600px) {
+        .products{
+            a > div{
+                column-gap: 0;
+                width: 19vw;
+                height: fit-content;
+            
+                img{
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .products{
+            a > div{
+                column-gap: 0;
+                width: 42.5vw;
+                height: fit-content;
+            
+                img{
+                    height: auto;
+                }
+            }
         }
     }
 `

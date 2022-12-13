@@ -15,11 +15,11 @@ export const Container = styled.div`
     color: var(--color-text-in-primary);
     
 
-    :focus-within {
+    :focus-within{
         border-color: var(--color-secondary);
     } 
 
-    input {
+    input{
         width: 100%;
         height: 100%;
         background: none;
@@ -32,7 +32,7 @@ export const Container = styled.div`
         z-index: 10;
     }
 
-    label {
+    label{
         display: flex;
         align-items: center;
         height: 100%;
@@ -63,11 +63,11 @@ export const Container = styled.div`
         font-weight:bold;
     }
 
-    input:focus ~ svg {
+    input:focus ~ svg{
         color: var(--color-primary);
     }
 
-    svg {
+    svg{
         width: 18px;
         height: 18px;
     }

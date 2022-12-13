@@ -14,6 +14,9 @@ export const Container = styled.section`
     background-color: #2E2E2E06;
     color: var(--color-text);
 
+    width: 15vw;
+    max-width: 200px;
+
     :hover{
         transform: scale(1.05);
         color: var(--color-primary);
@@ -22,27 +25,28 @@ export const Container = styled.section`
 
     img{
         border-radius: 10px;
+        width: 150px;
     }
 
-    header  {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        width: 120px;
-
-        h2{
-            font-size: 1rem;
-            font-weight: 400;
+    @media screen and (max-width: 1200px) {
+        img{
+            width: 100%;
         }
-    
+    }
+
+    @media screen and (max-width: 1070px) {
+        width: 25vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 38vw;
+
+        .categoryTitle{
+            font-size: 20px;
+        }
+
         h3{
-            bottom: 14%;
-            font-weight: 600;
+            font-size: 16px;
         }
-    }
-
-    @media screen and (max-width: 425px) {
-        width: 80vw;
     }
 `

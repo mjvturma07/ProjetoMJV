@@ -18,11 +18,8 @@ export const Market = styled.section`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /* Qual seria o row gap?
-    row-gap: 4rem; */
 
     height: 100%;
-    /* width: 100vw; */
     width: 90vw;
     max-width: 1600px;
 

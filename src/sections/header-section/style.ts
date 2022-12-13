@@ -16,6 +16,7 @@ export const Header = styled.header`
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
         a{
             text-decoration: none;
             color: var(--color-text);
@@ -41,6 +42,7 @@ export const Header = styled.header`
             gap: 2rem;
 
             margin-left: 2rem;
+
             li{
                 display: flex;
                 align-items: center;
@@ -61,6 +63,7 @@ export const Header = styled.header`
             height: 8rem;
             margin-right: 0;
         }
+
         #logoLink{
            display: flex;
            align-items: center;
@@ -79,6 +82,7 @@ export const Header = styled.header`
         #mobileMenu{
             display: flex;
         }
+
         #mobileMenuIcon{
             font-size:3.5rem;
             margin-left:1rem;
@@ -88,6 +92,7 @@ export const Header = styled.header`
             display: none;
             flex-direction:column;
         }
+
         .aparecer{
             display: flex;
             position: fixed;
@@ -116,9 +121,11 @@ export const Header = styled.header`
             margin-top: 2rem;
             cursor: pointer;
         }
+
         #menuMob{
             flex-direction: column;
         }
+        
         .row{
             display: flex;
             flex-direction: row;
