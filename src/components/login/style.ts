@@ -168,11 +168,17 @@ export const Container = styled.div`
     }
 
     @media (max-width: 500px) {
-        #formdiv{
-        width: 90vw;
+        form{
 
-        transform: translate(50%,-50%);
-        top: 350%;
+        width: 30rem;
+        height: 34rem;
+
+    }
+        #formdiv{
+
+
+        transform: translate(50%,10%);
+        top: 50%;
         right: 50%;
         z-index: 100;
         }
