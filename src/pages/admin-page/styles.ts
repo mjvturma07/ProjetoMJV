@@ -10,6 +10,10 @@ export const Container = styled.section`
     h1{
         text-align: center;
     }
+    
+    .footer{
+        row-gap: 0rem;
+    }
 `
 
 export const Main = styled.div`

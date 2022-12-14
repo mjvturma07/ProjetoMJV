@@ -32,7 +32,7 @@ export default function AdminPage(){
                 </section>
             </Main>
 
-            <Footer_section/>
+            <div className="footer"><Footer_section/></div>
         </Container>
     )
 }
