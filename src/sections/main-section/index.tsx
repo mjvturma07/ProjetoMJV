@@ -10,7 +10,7 @@ export default function Main_section(){
             </section>
 
             <section>
-                <img loading="lazy" id="mockup" src="/mockup.webp" alt="mão segurando celular" />
+                <img loading="eager" id="mockup" src="/mockup.webp" alt="mão segurando celular" />
             </section>
         </Main>
     )
