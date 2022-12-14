@@ -70,7 +70,7 @@ export function Dropdown({title,items}:dropdownProps) {
                     
                     {items.map(item => {
                         return(
-                            <Link onClick={closeMenu} to={item.path}>{item.name}</Link>
+                            <Link key={item.name} onClick={closeMenu} to={item.path}>{item.name}</Link>
                         )
                     })}
 
